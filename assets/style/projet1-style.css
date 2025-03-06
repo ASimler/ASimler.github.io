@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Montserrat-Thin";
-  src: url(../assets/fonts/Montserrat-Thin.ttf);
+  src: url(../fonts/Montserrat-Thin.ttf);
 }
 
 @font-face {
   font-family: "Montserrat-Medium";
-  src: url(../assets/fonts/Montserrat-Medium.ttf);
+  src: url(../fonts/Montserrat-Medium.ttf);
 }
 
 * {
@@ -100,7 +100,7 @@ nav li:last-child::before {
   align-items: center;
   padding: 50px 0;
   /* bg */
-  background: url(../assets/img/bg.jpg) center/cover no-repeat;
+  background: url(../img/bg.jpg) center/cover no-repeat;
   background-attachment: fixed; /* Pour que le texte défile derrière */
   background-position: 25% 83%;   /* pour mettre la mèche du gars sur le logo comme dans la maquette à 100% taille écran */
   background-size: 100%;
