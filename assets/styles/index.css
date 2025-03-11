@@ -54,6 +54,10 @@ body .button:hover {
   background: rgb(154, 239, 245);
   color: rgb(231, 97, 8);
 }
+body #second-btn:hover {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
 
 body header {
   height: 80vh;
@@ -61,17 +65,63 @@ body header {
   text-align: center;
   margin: 0 auto;
 }
+@media screen and (max-width: 910px) {
+  body header {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 440px) {
+  body header {
+    height: 60vh;
+  }
+}
 body header h1 {
   padding: 250px 0 50px 0;
   font-family: Font1;
   text-transform: uppercase;
   font-size: 5rem;
   color: #F3F3F3;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1130px) {
+  body header h1 {
+    font-size: 4rem;
+    padding: 250px 0 30px 0;
+  }
+}
+@media screen and (max-width: 685px) {
+  body header h1 {
+    font-size: 3rem;
+    padding: 200px 0 30px 0;
+  }
+}
+@media screen and (max-width: 530px) {
+  body header h1 {
+    font-size: 2.5rem;
+    padding: 180px 0 30px 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  body header h1 {
+    font-size: 2rem;
+    padding: 150px 0 30px 0;
+  }
 }
 body header p {
   font-size: 1.5rem;
   font-style: italic;
   color: #F3F3F3;
+}
+@media screen and (max-width: 530px) {
+  body header p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  body header p {
+    font-size: 1rem;
+  }
 }
 body header i {
   padding: 50px;
@@ -79,6 +129,12 @@ body header i {
   color: #F3F3F3;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media screen and (max-width: 440px) {
+  body header i {
+    font-size: 3rem;
+    padding: 30px;
+  }
 }
 body header i:hover {
   -webkit-transform: scale(1.2);
@@ -126,6 +182,13 @@ body main h3 {
   font-family: Font1;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 1115px) {
+  .nav-network {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
 .nav-network nav li {
   height: 80px;
   padding: 32px 20px;
@@ -134,6 +197,23 @@ body main h3 {
   position: relative;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .nav-network nav li {
+    font-size: 0.8rem;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 1111px) {
+  .nav-network nav li {
+    padding: 25px 20px;
+  }
 }
 .nav-network nav li:hover {
   cursor: pointer;
@@ -151,6 +231,12 @@ body main h3 {
   transition: 0.3s;
   z-index: 1;
 }
+@media screen and (max-width: 1115px) {
+  .nav-network nav li::before {
+    -webkit-transform: translateY(-25px) translateX(-63px);
+            transform: translateY(-25px) translateX(-63px);
+  }
+}
 .nav-network nav li::before:hover {
   cursor: pointer;
   background: #F3F3F3;
@@ -165,6 +251,13 @@ body main h3 {
 .nav-network .network li {
   padding: 0 30px;
   font-size: 1.3rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 900px) {
+  .nav-network .network li {
+    padding: 0 10px;
+  }
 }
 .nav-network .network li i {
   -webkit-transition: 0.2s;
@@ -174,6 +267,11 @@ body main h3 {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   color: rgb(154, 239, 245);
+}
+@media screen and (max-width: 700px) {
+  .nav-network .network {
+    display: none;
+  }
 }
 
 body main .main-top {
@@ -193,6 +291,23 @@ body main .main-top h2::before {
   background: rgba(128, 128, 128, 0.212);
   top: 90px;
   left: 5%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1100px) {
+  body main .main-top h2::before {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  body main .main-top h2::before {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main .main-top h2::before {
+    width: 20%;
+  }
 }
 body main .main-top h2::after {
   content: "";
@@ -202,6 +317,23 @@ body main .main-top h2::after {
   background: rgba(128, 128, 128, 0.212);
   top: 90px;
   right: 5%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1100px) {
+  body main .main-top h2::after {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  body main .main-top h2::after {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main .main-top h2::after {
+    width: 20%;
+  }
 }
 body main .main-top h3 {
   font-size: 2.5rem;
@@ -230,17 +362,30 @@ body main .main-bottom::after {
   top: 1px; /* Pour que ça ne double pas la bordure du haut */
   left: 50%;
 }
+@media screen and (max-width: 1100px) {
+  body main .main-bottom::after {
+    display: none;
+  }
+}
 body main .main-bottom .main-bottom-container {
   display: grid;
   grid-template-columns: 50% 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-top: 1px solid rgba(128, 128, 128, 0.212);
+}
+@media screen and (max-width: 1100px) {
+  body main .main-bottom .main-bottom-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+  }
 }
 body main .main-bottom .main-bottom-container .main-info {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 10%;
+  border-top: 1px solid rgba(128, 128, 128, 0.212);
 }
 body main .main-bottom .main-bottom-container .main-info h2 {
   padding: 50px 0 30px 0;
@@ -265,14 +410,6 @@ body main .main-bottom .main-bottom-container .main-info .secb-img img {
   -o-object-fit: cover;
      object-fit: cover; /* Evite à l'image de s'étirer */
 }
-body main .main-bottom .main-bottom-btn {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-body main .main-bottom .main-bottom-btn .button:nth-child(1):hover {
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-}
 
 body footer {
   background: white;
@@ -280,6 +417,12 @@ body footer {
   margin: 50px auto;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 1100px) {
+  body footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 body footer .f-titles {
   font-family: Font1;

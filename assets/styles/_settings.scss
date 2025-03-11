@@ -61,5 +61,9 @@ body {
       color: $color3;
     }
   }
+  
+  #second-btn:hover {
+    transform: rotate(-5deg);
+  }
 
 }

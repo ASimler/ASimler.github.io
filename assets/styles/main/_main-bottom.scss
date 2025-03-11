@@ -11,17 +11,31 @@ body {
         background: $barcolor;
         top: 1px; /* Pour que ça ne double pas la bordure du haut */
         left: 50%;
+
+        @media screen and (max-width: 1100px) {
+          display: none;
+        }
       }
 
       .main-bottom-container {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: center;
-        border-top: 1px solid $barcolor;
+        // border-top: 1px solid $barcolor;
+
+        @media screen and (max-width: 1100px) {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50% 50%;
+        }
+
 
         .main-info {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
+          padding: 0 10%;
+          border-top: 1px solid $barcolor;
+          
           
 
           h2 {
@@ -53,14 +67,7 @@ body {
           }
         }
       }
-      .main-bottom-btn {
-        display: grid;
-        grid-template-columns: 50% 50%;
 
-        .button:nth-child(1):hover {
-          transform: rotate(-5deg);
-        }
-      }
     }
   }
 }
