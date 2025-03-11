@@ -20,7 +20,36 @@ body {
 
         p {
           padding-right: 30%;
+          color: grey;
         }
+
+        ul {
+          justify-content: start;
+          li {
+            padding-right: 15px;
+            a {
+              color: $black;
+              // Pour créer les cercles :
+              width: 54px;
+              height: 54px;
+              font-size: 1.2rem;
+              border: 1px solid $barcolor;
+              border-radius: 150px;
+              // Pour aligner le i au centre :
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: 0.3s;
+
+              &:hover {
+                color: $color3;
+                border-color: $color3;
+              }
+            }
+          }
+        }
+
+
 
       }
 

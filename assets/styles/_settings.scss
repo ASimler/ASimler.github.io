@@ -10,9 +10,12 @@
 
 // Variables
 $color1: #F3F3F3;
-$black: rgb(29, 29, 29);
+$color2: rgb(154, 239, 245);
+$color3: rgb(231, 97, 8);
+$black: rgb(65, 65, 65);
 $barcolor: rgba(128, 128, 128, 0.212);
 $footer-title-color : rgb(83, 83, 83);
+
 
 * {
   margin: 0;
@@ -47,6 +50,16 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 60px auto 50px auto;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(5deg);
+      border-radius: 10px;
+      border-color: $color2;
+      background: $color2;
+      color: $color3;
+    }
   }
 
 }
