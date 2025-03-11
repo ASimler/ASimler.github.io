@@ -1,0 +1,28 @@
+body {
+  header {
+    height: 80vh;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+
+    h1 {
+      padding: 250px 0 50px 0;
+      font-family: Font1;
+      text-transform: uppercase;
+      font-size: 5rem;
+      color: $color1;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: $color1;
+    }
+
+    i {
+      padding: 50px;
+      font-size: 5rem;
+      color: $color1;
+    }
+  }
+}

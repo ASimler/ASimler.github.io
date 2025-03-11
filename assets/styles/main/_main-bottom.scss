@@ -1,0 +1,63 @@
+body {  
+  main {
+    .main-bottom {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 99.8%;
+        background: $barcolor;
+        top: 2px; /* Pour que ça ne double pas la bordure du haut */
+        left: 50%;
+      }
+
+      .main-bottom-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        border-top: 2px solid $barcolor;
+
+        .main-info {
+          width: 80%;
+          margin: 0 auto;
+          
+
+          h2 {
+            padding: 50px 0 30px 0; 
+          }
+
+
+          h3 {
+            line-height: 30px;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 35px;
+            text-align: left;
+            margin-top: 20px;
+          }
+
+          .secb-img {
+            display: grid;
+            height: 450px;
+
+            img {
+              width: 100%;
+              height: 100%; /* Remplit la div */
+              max-height: 450px;
+              object-fit: cover; /* Evite à l'image de s'étirer */
+            }
+          }
+        }
+      }
+      .main-bottom-btn {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    }
+  }
+}
+

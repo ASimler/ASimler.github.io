@@ -1,0 +1,17 @@
+body {
+  footer {
+    background: white;
+    width: 80%;
+    margin: 50px auto 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .f-titles {
+      font-family: Font1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $footer-title-color;
+      font-size: 0.9rem;
+    }
+  }
+}

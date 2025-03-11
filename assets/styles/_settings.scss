@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Font1";
+  src: url(../fonts/Inter_18pt-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url(../fonts/Merriweather_24pt-Light.ttf);
+}
+
+// Variables
+$color1: #F3F3F3;
+$black: rgb(29, 29, 29);
+$barcolor: rgba(128, 128, 128, 0.212);
+$footer-title-color : rgb(83, 83, 83);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: url(../img/bg.jpg) center/cover fixed;
+  font-family: Font2;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  a {
+    color: $color1;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $color1;
+  }
+
+  .button {
+    padding: 15px 40px;
+    border: 2px solid $black;
+    background: none;
+    font-family: Font1;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 60px auto 50px auto;
+  }
+
+}

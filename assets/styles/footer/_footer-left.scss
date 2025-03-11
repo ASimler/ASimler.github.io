@@ -1,0 +1,29 @@
+body {
+  footer {
+    .footer-left {
+      width: 80%;
+      margin: 0 auto;
+
+      form {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 16% 16% 50% 16%;
+        margin: 50px 0;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          input[type="text"], 
+          textarea {
+            padding: 15PX 10px;
+            margin-top: 20px;
+            border: 1px solid $barcolor;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
