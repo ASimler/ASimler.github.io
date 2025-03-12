@@ -18,8 +18,6 @@
 body {
   background: url(../img/bg.jpg) center/cover fixed;
   font-family: Font2;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 body ul {
   display: -webkit-box;
