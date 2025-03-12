@@ -38,7 +38,11 @@ body {
 
       @media screen and (max-width: 440px) {
         font-size: 2rem;
-        padding: 150px 0 30px 0;
+        
+      }
+
+      @media screen and (max-width: 360px) {
+        padding: 100px 0 30px 0;
       }
  
     }

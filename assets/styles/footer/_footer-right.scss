@@ -41,6 +41,18 @@ body {
               align-items: center;
               transition: 0.3s;
 
+              @media screen and (max-width: 560px) {
+                font-size: 1rem;
+                width: 44px;
+                height: 44px;
+              }
+
+              @media screen and (max-width: 460px) {
+                font-size: 0.9rem;
+                width: 34px;
+                height: 34px;
+              }
+
               &:hover {
                 color: $color3;
                 border-color: $color3;

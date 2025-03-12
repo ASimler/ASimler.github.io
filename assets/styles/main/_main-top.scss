@@ -58,6 +58,16 @@ body {
 
       h3 {
         font-size: 2.5rem;
+        transition: 0.2s;
+
+        @media screen and (max-width: 700px) {
+          font-size: 2rem;
+          padding-bottom: 20px;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 1.5rem;
+        }
       }
 
       p {
@@ -67,6 +77,18 @@ body {
         font-style: italic;
         font-size: 1rem;
         line-height: 40px;
+        transition: 0.2s;
+
+        @media screen and (max-width: 700px) {
+          font-size: 0.9rem;
+          line-height: 35px;
+          width: 80%;
+          padding-bottom: 30px;
+        }
+
+        @media screen and (max-width: 700px) {
+          line-height: 30px;
+        }
       }
 
       .sec1-img {

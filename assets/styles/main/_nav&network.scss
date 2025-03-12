@@ -11,6 +11,10 @@
     justify-content: left;
   }
 
+  @media screen and (max-width: 450px) {
+    width: 90%;
+  }
+
   color: $color1;
   font-family: Font1;
   letter-spacing: 2px;
@@ -35,6 +39,15 @@
         padding: 25px 20px;
       }
 
+      @media screen and (max-width: 480px) {
+        font-size: 0.7rem;
+        padding: 28px 10px;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 0.6rem;
+      }
+
       &:hover {
         cursor: pointer;
         color: $black;
@@ -45,13 +58,19 @@
         position: absolute;
         width: 100%;
         height: 80px;
-        background: $color1 transparent;
+        background: transparent;
         transform: translateY(-32px) translateX(-20px);
         transition: 0.3s;
         z-index: 1;
+        // Le mettre en 1 permet que lorsque l'utilisateur passe son curseur dessus cela active le hover, et une fois le hover activé il passe en -1 afin que lorsque l'utilisateur survole le texte le hover continue.
 
         @media screen and (max-width: 1115px) {
-          transform: translateY(-25px) translateX(-63px);
+          left: 0;
+          transform: translateY(-30%);
+        }
+
+        @media screen and (max-width: 480px) {
+          transform: translateY(-35%);
         }
 
         &:hover {

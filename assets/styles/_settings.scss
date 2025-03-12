@@ -52,6 +52,13 @@ body {
     margin: 60px auto 50px auto;
     transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s;
+
+    @media screen and (max-width: 700px) {
+      font-size: 0.9rem;
+      padding: 10px 30px;
+      margin: 30px auto;
+    }
 
     &:hover {
       transform: rotate(5deg);

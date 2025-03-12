@@ -11,6 +11,10 @@ body {
       grid-template-rows: repeat(2, 1fr);
     }
 
+    @media screen and (max-width: 450px) {
+      width: 90%;
+    }
+
     .f-titles {
       font-family: Font1;
       text-transform: uppercase;
