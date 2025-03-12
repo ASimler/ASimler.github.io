@@ -240,13 +240,13 @@ body main h3 {
 }
 @media screen and (max-width: 480px) {
   .nav-network nav li {
-    font-size: 0.7rem;
     padding: 28px 10px;
   }
 }
 @media screen and (max-width: 450px) {
   .nav-network nav li {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    padding: 28px 5px;
   }
 }
 .nav-network nav li:hover {
