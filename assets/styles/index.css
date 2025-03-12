@@ -110,11 +110,15 @@ body header h1 {
     padding: 180px 0 30px 0;
   }
 }
+@media screen and (max-width: 500px) {
+  body header h1 {
+    padding-top: 50px;
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 440px) {
   body header h1 {
     font-size: 2rem;
-    padding-top: 50px;
-    margin-top: 0;
   }
 }
 body header p {
