@@ -1,9 +1,16 @@
 body {
   footer {
+
+    @media screen and (max-width: 600px) {
+      height: 1300px;
+    }
+
     .footer-right {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       border-left: 1px solid $barcolor;
+
+
 
       .fdivs-right {
         width: 100%;
@@ -14,6 +21,13 @@ body {
         position: relative;
         border-bottom: 1px solid $barcolor;
 
+        @media screen and (max-width: 600px) {
+          grid-template-columns: 40% 60%;
+          // height: 50%;
+        }
+
+
+
         h4 {
           text-align: center;
         }
@@ -21,12 +35,20 @@ body {
         p {
           padding-right: 30%;
           color: grey;
+
+          @media screen and (max-width: 500px) {
+            font-size: 0.9rem;
+          }
         }
 
         ul {
           justify-content: start;
           li {
             padding-right: 15px;
+
+            @media screen and (max-width: 500px) {
+              padding-right: 10px;
+            }
             a {
               color: $black;
               // Pour créer les cercles :
@@ -51,6 +73,12 @@ body {
                 font-size: 0.9rem;
                 width: 34px;
                 height: 34px;
+              }
+
+              @media screen and (max-width: 360px) {
+                font-size: 0.8rem;
+                width: 24px;
+                height: 24px;
               }
 
               &:hover {

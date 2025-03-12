@@ -573,6 +573,11 @@ body footer .footer-left form div input[type=submit]:hover {
           transform: scale(0.9);
 }
 
+@media screen and (max-width: 600px) {
+  body footer {
+    height: 1300px;
+  }
+}
 body footer .footer-right {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
@@ -589,12 +594,22 @@ body footer .footer-right .fdivs-right {
   position: relative;
   border-bottom: 1px solid rgba(128, 128, 128, 0.212);
 }
+@media screen and (max-width: 600px) {
+  body footer .footer-right .fdivs-right {
+    grid-template-columns: 40% 60%;
+  }
+}
 body footer .footer-right .fdivs-right h4 {
   text-align: center;
 }
 body footer .footer-right .fdivs-right p {
   padding-right: 30%;
   color: grey;
+}
+@media screen and (max-width: 500px) {
+  body footer .footer-right .fdivs-right p {
+    font-size: 0.9rem;
+  }
 }
 body footer .footer-right .fdivs-right ul {
   -webkit-box-pack: start;
@@ -603,6 +618,11 @@ body footer .footer-right .fdivs-right ul {
 }
 body footer .footer-right .fdivs-right ul li {
   padding-right: 15px;
+}
+@media screen and (max-width: 500px) {
+  body footer .footer-right .fdivs-right ul li {
+    padding-right: 10px;
+  }
 }
 body footer .footer-right .fdivs-right ul li a {
   color: rgb(65, 65, 65);
@@ -635,6 +655,13 @@ body footer .footer-right .fdivs-right ul li a {
     font-size: 0.9rem;
     width: 34px;
     height: 34px;
+  }
+}
+@media screen and (max-width: 360px) {
+  body footer .footer-right .fdivs-right ul li a {
+    font-size: 0.8rem;
+    width: 24px;
+    height: 24px;
   }
 }
 body footer .footer-right .fdivs-right ul li a:hover {
