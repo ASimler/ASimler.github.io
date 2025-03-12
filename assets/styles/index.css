@@ -18,6 +18,13 @@
 body {
   background: url(../img/bg.jpg) center/cover fixed;
   font-family: Font2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-size: 500%;
+  }
 }
 body ul {
   display: -webkit-box;
