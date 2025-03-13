@@ -1,0 +1,255 @@
+body {
+  header {
+    height: 100vh;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // Afin de pouvoir placer la nav-bar en absolute pour qu'elle soit toujours en bas de l'écran
+
+    @media screen and (max-width: 440px) {
+      height: 60vh;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 90%;
+    }
+
+    .header-container {
+      transform: translateY(40px);
+      opacity: 0;
+      animation: animHeader 1.5s ease forwards;
+
+      @keyframes animHeader {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      h1 {
+        padding-bottom: 50px;
+        font-family: Font1;
+        text-transform: uppercase;
+        font-size: 5rem;
+        letter-spacing: 6px;
+        color: $color1;
+        transition: 0.2s;
+  
+        @media screen and (max-width: 1130px) {
+          font-size: 4rem;
+          padding-bottom: 30px;
+        }
+  
+        @media screen and (max-width: 685px) {
+          font-size: 3rem;
+        }
+  
+        @media screen and (max-width: 530px) {
+          font-size: 2.5rem;
+        }
+  
+        @media screen and (max-width: 500px) {
+          margin-top: 0;
+        }
+  
+        @media screen and (max-width: 440px) {
+          font-size: 2rem;        
+        }
+      }
+  
+      p {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: $color1;
+  
+        @media screen and (max-width: 530px) {
+          font-size: 1.2rem;
+        }
+  
+        @media screen and (max-width: 440px) {
+          font-size: 1rem;
+        }
+      }
+      
+      a {
+        margin: 50px auto 0 auto;
+        text-decoration: none;
+        width: 74px;
+        height: 74px;
+        border: 2px solid $color1;
+        border-radius: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // transition: 0.2s;
+        font-size: 1.2rem;
+        color: $color1;
+        transition: 0.3s;
+
+        &:hover {
+          border: 2px solid $color2;
+          width: 60px;
+          height: 60px;
+          transform: scale(1.1);
+          color: $color2;
+        }
+
+        @media screen and (max-width: 440px) {
+          margin-top: 30px;
+          width: 45px;
+          height: 45px;
+          font-size: 1rem;
+        }
+
+      }
+    }
+
+    .nav-network {
+      background: rgba(223, 223, 223, 0.315);
+      width: 100%;
+      margin: 0 auto;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+    
+      @media screen and (max-width: 1115px) {
+        justify-content: left;
+      }
+    
+
+    
+      color: $color1;
+      font-family: Font1;
+      letter-spacing: 2px;
+    
+      nav {
+        // Pour faire que lorsqu'on survole un autre élément que le first child tous les éléments non survolés n'ont plus de bg white...
+        &:hover li:not(:hover) {
+          background: none;
+          color: $color1;
+        }
+        ul {
+          height: 80px;
+          li {
+            // mettre la height en px à la nav ou l'ul et mettre 100% de height aux li permet de changer leur background en hover
+            height: 100%;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            position: relative;
+            transition: 0.3s;
+
+            // Pour mettre un bg white et color black au first child de base :
+            &:first-child {
+              background: $color1;
+              color: $black;
+            }
+      
+            @media screen and (max-width: 1200px) {
+              font-size: 0.8rem;
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+            }
+            @media screen and (max-width: 1111px) {
+              padding: 25px 20px;
+            }
+      
+            @media screen and (max-width: 480px) {
+              padding: 28px 10px;
+            }
+      
+            @media screen and (max-width: 450px) {
+              font-size: 0.7rem;
+              padding: 28px 5px;
+            }
+      
+            &:hover {
+              cursor: pointer;
+              color: $black;
+              background: $color1;
+            }
+      
+            // &::before {
+            //   content: "";
+            //   position: absolute;
+            //   width: 100%;
+            //   height: 80px;
+            //   background: transparent;
+            //   transform: translateY(-32px) translateX(-20px);
+            //   transition: 0.3s;
+            //   z-index: 1;
+            //   // Le mettre en 1 permet que lorsque l'utilisateur passe son curseur dessus cela active le hover, et une fois le hover activé il passe en -1 afin que lorsque l'utilisateur survole le texte le hover continue.
+      
+            //   @media screen and (max-width: 1115px) {
+            //     left: 0;
+            //     transform: translateY(-30%);
+            //   }
+      
+            //   @media screen and (max-width: 480px) {
+            //     transform: translateY(-35%);
+            //   }
+      
+            //   &:hover {
+            //     cursor: pointer;
+            //     background: $color1;
+            //     z-index: -1;
+                
+            //     transition: 0.3s;
+            //   }
+            // }
+      
+            // &:hover::before {
+            //   background: $color1;
+            //   z-index: -1;
+            // }
+          }
+        }
+      }
+    
+      .network {
+        width: 25%;
+
+        @media screen and (max-width: 965px) {
+          margin-right: 20px;
+        }
+
+        @media screen and (max-width: 700px) {
+          display: none;
+        }
+
+        ul {
+          min-width: 100px;
+          max-width: 300px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        
+          li {
+            font-size: 1.3rem;
+            transition: 0.2s;
+  
+            i {
+              transition: 0.2s;    
+            }
+      
+            i:hover {
+              transform: scale(1.5);
+              color: $color2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

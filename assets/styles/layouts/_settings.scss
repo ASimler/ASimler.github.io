@@ -16,6 +16,17 @@ $black: rgb(65, 65, 65);
 $barcolor: rgba(128, 128, 128, 0.212);
 $footer-title-color : rgb(83, 83, 83);
 
+// Mixins
+@mixin title {
+  font-family: Font1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+  // Permet de ralentir la descente lors du clic sur la flèche du header
+}
 
 * {
   margin: 0;
@@ -27,17 +38,36 @@ $footer-title-color : rgb(83, 83, 83);
 body {
   background: url(../img/bg.jpg) center/cover fixed;
   font-family: Font2;
+  max-width: 1900px;
+  margin: 0 auto;
+
+  // Créer l'animation : apparition du body depuis un écran noir :
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 10, 2);
+    animation: animBefore 2s ease forwards;
+    // forwards = tu restes dans l'état dans lequel tu termines
+    animation-delay: 0.15s; 
+    // déclenchement au bout de 0.15sec
+
+    @keyframes animBefore {
+      to {
+        opacity: 0%;
+      }
+    }
+  }
 
   ul {
     display: flex;
     justify-content: space-around;
   }
   
-  a {
-    color: $color1;
-    text-decoration: none;
-  }
-  a:visited {
+  a, a:visited {
     color: $color1;
   }
 
@@ -45,10 +75,8 @@ body {
     padding: 15px 40px;
     border: 2px solid $black;
     background: none;
-    font-family: Font1;
+    @include title;
     font-size: 1rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     margin: 60px auto 50px auto;
     transition: 0.2s;
     cursor: pointer;
