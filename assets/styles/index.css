@@ -57,6 +57,7 @@ body ul {
 }
 body a, body a:visited {
   color: #F3F3F3;
+  text-decoration: none;
 }
 body .button {
   padding: 15px 40px;
