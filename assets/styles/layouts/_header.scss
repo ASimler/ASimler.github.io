@@ -11,10 +11,6 @@ body {
     position: relative;
     // Afin de pouvoir placer la nav-bar en absolute pour qu'elle soit toujours en bas de l'écran
 
-    @media screen and (max-width: 440px) {
-      height: 60vh;
-    }
-
     @media screen and (max-width: 450px) {
       width: 90%;
     }
