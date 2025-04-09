@@ -1,137 +1,202 @@
-// 1 - Tester le lien de l'API dans le navigateur (https://restcountries.com/v3.1/all)
+const main = document.querySelector('main');
+const basicArray = [
+  {pic: 0, min: 1},
+  {pic: 1, min: 1},
+  {pic: 2, min: 1},
+  {pic: 3, min: 1},
+  {pic: 4, min: 1},
+  {pic: 5, min: 1},
+  {pic: 6, min: 1},
+  {pic: 7, min: 1},
+  {pic: 8, min: 1},
+  {pic: 9, min: 1},
+];
 
-// 2 - Créer une fonction pour "fetcher" les données, afficher les données dans la console.
+let exerciceArray = [];
 
-// 3 - Passer les données à une variable
-
-// 4 - Créer une fonction d'affichage, et paramétrer l'affichage des cartes de chaque pays grace à la méthode MAP
-
-// 5 - Récupérer ce qui est tapé dans l'input et filtrer (avant le map) les données
-// coutry.name.includes(inputSearch.value);
-
-// 6 - Avec la méthode Slice gérer le nombre de pays affichés (inputRange.value)
-
-// 7 - Gérer les 3 boutons pour trier (méthode sort()) les pays
-
-// S'appuyer sur l'architecture de l'appli cuisine
-
-// Architecture de la fonction d'affichage :
-// countriesContainer.innerHTML = monTableau
-//     .filter((country) => country.nomdupays.includes(inputSearch.value))
-//     .sort((a, b) => {
-//         if (...) {
-//             return ...
-//         } else if (...) {
-//             return ...
-//         }
-//     })
-//     .slice(0, inputRange.value)
-//     .map((country) => `
-//         <div> class="card">
-
-//         </div>    
-//     `);
-
-// Au début : ne pas faire filter/sort/slice mais uniquement le map puis ajouter les 3
+// Get stored exercices array
+// (Fonction qui se lance toute seule sans nom, ne se lance qu'une fois au load)
+(() => {
+  if (localStorage.exercices) {
+    exerciceArray = JSON.parse(localStorage.exercices);
+  } else {
+    exerciceArray = basicArray;
+  }
+})();
 
 
+class Exercice {
+  constructor() {
+    this.index = 0;
+    this.minutes = exerciceArray[this.index].min;
+    this.seconds = 0;
+  }
 
-// ------------
-// TP - SCRIPT
-// ------------
+  uptadeCountdouwn() {
+    this.seconds = this.seconds < 10 ? "0" + this.seconds : this.seconds;
 
-// Constantes et variables :
-const countriesUL = document.getElementById("countries");
-const countriesContainer = document.querySelector(".countries-container");
-const search = document.getElementById("inputSearch");
-const range = document.getElementById("inputRange");
-const rangeSpan = document.getElementById("rangeValue");
-const btnSort = document.querySelectorAll(".btnSort");
+    setTimeout(() => {
+      if (this.minutes === 0 && this.seconds === "00") {
+        this.index++;
+        this.ring();
+        if (this.index < exerciceArray.length) {
+          this.minutes = exerciceArray[this.index].min;
+          this.seconds = 0;
+          this.uptadeCountdouwn();
+        } else {
+          return page.finish();
+        }
+      } else if (this.seconds === "00") {
+        this.minutes--;
+        this.seconds = 59;
+        this.uptadeCountdouwn();
+      } else {
+        this.seconds--;
+        this.uptadeCountdouwn();
+      }
+    }, 1000)
 
-let countries = [];
-let countrySearched = '';
-let countriesSlice = [];
-let countriesSort = [];
-let countriesValues = [];
-let triVar = "maxToMin";
+    return (main.innerHTML = `
+    <div class="exercice-container">
+      <p>${this.minutes}:${this.seconds}</p>
+      <img src="./img/${exerciceArray[this.index].pic}.png" />
+      <div>${this.index + 1}/${exerciceArray.length}</div>
+    </div>
+    `)
+  }
 
-// Pour récupérer les données :
-async function fetchCountries() {
-    await fetch("https://restcountries.com/v3.1/all")
-    .then((res) => res.json())
-    .then((data) => countries = data)
-    .catch((err) => console.log(err));
-    console.log(countries);
+  ring() {
+    const audio = new Audio();
+    audio.src = "ring.mp3";
+    audio.play();
+  }
 }
 
-// Pour afficher les données directement :
-function countriesDisplay() {
-    if (!countries.length) {
-        countriesContainer.innerHTML = '<h2>Aucune donnée à afficher</h2>';
-    } else {
-        countriesContainer.innerHTML = countries
-        .filter((country) =>
-            country.translations.fra.common.toLowerCase().includes(search.value.toLowerCase())
-        )   
-        .sort((a, b) => {
-            if (triVar === 'maxToMin') {
-                return b.population - a.population;
-            } else if (triVar === 'minToMax') {
-                return a.population - b.population;
-            } else if (triVar === 'alpha') {
-                return a.translations.fra.common.localeCompare(b.translations.fra.common);
-            }
-        })
-        .slice(0, inputRange.value)
-        // Fallbacks avec || si capital et alt non existants
-        .map(country => `
-            <div class="card">
-                <img src="${country.flags.svg}" alt="${country.flags.alt || 'Drapeau'}">
-                <h2>${country.translations.fra.common}</h2>
-                <p>Capitale : ${country.capital?.[0] || "Aucune capitale"}</p>
-                <p>Population : ${country.population.toLocaleString()} habitants</p>
-            </div>
-        `).join('');
-    }
-}
 
-window.addEventListener('load', async () => {
-    const loadingMsg = document.createElement('h2');
-    loadingMsg.textContent = "Chargement des données...";
-    document.body.prepend(loadingMsg);
-    // prepend() insère des objets ou string avant le premier enfant de l'élément courant, ici le body. Ils sont appelés "noeuds".
+const utils = {
+  // Pour éviter de répéter des innerHTML à chaque nouvelle vue de la page, on crée une fonction :
+  pageContent: function(title, content, btn) {
+    document.querySelector('h1').innerHTML = title;
+    main.innerHTML = content;
+    document.querySelector('.btn-container').innerHTML = btn;
+  },
 
-    await fetchCountries(); // Attend la fin du fetch
-    loadingMsg.remove();
-    countriesDisplay(); // Affiche immédiatement après
-});
-
-// Input focus
-search.addEventListener('input', (e) => {
-    countriesDisplay();
-})
-
-// Input not focus without value : réafficher tous les pays
-search.addEventListener('focusout', (e) => {
-    if (!e.target.value.trim()) {
-        countriesDisplay();
-    } 
-});
-
-// Input Range
-range.addEventListener('input', (e) => {
-    rangeValue = e.target.value;
-    rangeSpan.textContent = rangeValue;
-    countriesDisplay();
-
-});
-
-
-// Tris
-btnSort.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        triVar = e.target.id;
-        countriesDisplay();
-        
+  handleEventMinutes: function() {
+    document.querySelectorAll('input[type="number"]').forEach((input) => {
+      input.addEventListener('input', (e) => {
+        exerciceArray.map((exo) => {
+          if (exo.pic == e.target.id) {
+            exo.min = parseInt(e.target.value);
+            this.store();            
+          }
+        }) 
+      })
     })
-})
+  },
+
+  handleEventArrow: function() {
+    document.querySelectorAll('.arrow').forEach((arrow) => {
+      arrow.addEventListener('click', (e) => {
+        let position = 0;
+        exerciceArray.map((exo) => {
+          if (exo.pic == e.target.dataset.pic && position !== 0) {
+            [exerciceArray[position], exerciceArray[position -1]] = [exerciceArray[position -1], exerciceArray[position]];
+            page.lobby();
+            this.store();
+          } else {
+            position++;
+          }
+        }) 
+      })
+    })
+  },
+
+  deleteItem: function() {
+    document.querySelectorAll('.deleteBtn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        let newArr = [];
+        exerciceArray.map((exo) => {
+          if (exo.pic != e.target.dataset.pic) {
+            newArr.push(exo);
+          }
+        })
+        exerciceArray = newArr;
+        page.lobby();
+        this.store();  
+      })
+    })
+  },
+
+  reboot: function() {
+    exerciceArray = basicArray;
+    page.lobby();
+    this.store();
+  },
+
+  store: function() {
+    localStorage.exercices = JSON.stringify(exerciceArray);
+  }
+}
+
+
+const page = {
+  lobby: function() {
+    let mapArray = exerciceArray.map((exo) => {
+      // map avec accolades = RETURN ` !!!!
+      return `
+          <li>
+            <div class='card-header'>
+              <input type='number' id=${exo.pic} min='1' max='10' value=${exo.min}>
+              <span>min</span>
+            </div>
+            <img src='./img/${exo.pic}.png' />
+            <i class='fas fa-arrow-alt-circle-left arrow' data-pic=${exo.pic}
+            ></i>
+            <i class='fas fa-times-circle deleteBtn' data-pic=${exo.pic}
+            ></i>
+          </li>
+      `
+    }).join('');
+    utils.pageContent(
+      "Paramétrage <i id='reboot' class='fas fa-undo'></i>",
+      "<ul>" + mapArray + "</ul>",
+      "<button id='start'>Commencer<i class='far fa-play-circle'></i></button>"
+    );
+    utils.handleEventMinutes();
+    utils.handleEventArrow();
+    utils.deleteItem();
+    reboot.addEventListener('click', () => {
+      utils.reboot();
+    });
+    start.addEventListener('click', () => {
+      this.routine();
+    });
+  },
+
+  routine: function() {
+    const exercice = new Exercice();
+    utils.pageContent(
+      "Routine",
+      exercice.uptadeCountdouwn(),
+      null
+      // null car pas de bouton sur cette vue
+    )
+  },
+
+  finish: function() {
+    utils.pageContent(
+      "C'est terminé !",
+      "<button id='start'>Recommencer</button>",
+      "<button id='reboot' class='btn-reboot'>Réinitialiser <i class='fas fa-times-circle'</i></button>"
+    );
+
+    start.addEventListener('click', () => {
+      this.routine();
+    });
+    reboot.addEventListener('click', () => {
+      utils.reboot();
+    });
+  }
+}
+
+page.lobby();
