@@ -2,7 +2,54 @@
   font-family: "Bellota";
   src: url(./../../fonts/BellotaText-Light.ttf);
 }
+:root {
+  --white1: rgb(254, 255, 243);
+  --black1: rgb(53, 53, 53);
+  --color1: rgb(66, 136, 194);
+}
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: rgb(255, 249, 235);
+  background: url(./../../img/BG-Page1.jpg) center/cover fixed;
   font-family: Bellota;
+  color: var(--black1);
+}
+
+nav {
+  margin: 20px auto;
+  width: 80%;
+  background: rgba(237, 237, 237, 0.263);
+  border-radius: 2px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  transition: 0.2s;
+  padding: 15px;
+  width: 25%;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+li:hover {
+  background: var(--white1);
+  color: var(--color1);
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px auto;
+  color: var(--black1);
 }/*# sourceMappingURL=index.css.map */

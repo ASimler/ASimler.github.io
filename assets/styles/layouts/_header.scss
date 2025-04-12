@@ -1,0 +1,30 @@
+nav {
+    margin: 20px auto;
+    width: 80%;
+    background: rgba(237, 237, 237, 0.263);
+    // padding: 15px;
+    border-radius: 2px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    transition: 0.2s;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+    user-select: none;
+}
+
+li:hover {
+    background: var(--white1);
+    color: var(--color1);
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px auto;
+    color: var(--black1);
+}
