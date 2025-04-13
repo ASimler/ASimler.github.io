@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(./../fonts/BellotaText-Light.ttf);
+}
+:root {
+  --white1: rgb(254, 255, 243);
+  --white2: rgba(237, 237, 237, 0.263);
+  --black1: rgb(53, 53, 53);
+  --color1: rgb(66, 136, 194);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./../img/BG-Page1.jpg) center/cover fixed;
+  font-family: Bellota;
+  color: var(--black1);
+  height: 100vh;
+}
+body a {
+  text-decoration: none;
+  color: var(--black1);
+}
+body a:visited {
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background: var(--white1);
+  bottom: 50px;
+  left: 10%;
+}
+header nav {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 750px;
+  background: var(--white2);
+  border-radius: 2px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav li {
+  width: 25%;
+}
+header nav li a {
+  transition: 0.2s;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header nav li a:hover {
+  background: var(--white1);
+  cursor: pointer;
+  color: var(--color1);
+}
+header h1 {
+  margin: 100px auto;
+  font-size: 3rem;
+  color: var(--white1);
+}
+header .textIntro {
+  width: 50%;
+  margin: 100px auto;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(147, 182, 209, 0.537);
+  box-shadow: 0 0 12px 6px rgba(147, 182, 209, 0.54);
+  color: var(--white1);
+}
+header #arrow {
+  margin: 150px auto;
+  border: 3px solid var(--white1);
+  border-radius: 150px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  color: var(--white1);
+  font-size: 3rem;
+}
+header #arrow:hover {
+  transform: scale(1.2);
+  border: 3px dotted var(--white1);
+  color: var(--white1);
+}
+
+main {
+  height: 100vh;
+}
+main .section {
+  background: rgba(214, 222, 231, 0.768);
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 20px;
+}
+main .section h2 {
+  padding-bottom: 30px;
+}/*# sourceMappingURL=index.css.map */

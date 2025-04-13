@@ -1,0 +1,14 @@
+main {
+    height: 100vh;
+    .section {
+        background: rgba(214, 222, 231, 0.768);
+        width: 80%;
+        margin: 30px auto;
+        border-radius: 5px;
+        padding: 20px;
+
+        h2 {
+            padding-bottom: 30px;
+        }
+    }
+}
