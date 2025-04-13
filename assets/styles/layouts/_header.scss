@@ -50,6 +50,7 @@ header {
           background: var(--white1);
           cursor: pointer;
           color: var(--color1);
+          border-radius: 2px;
         }
       }
     }
@@ -77,6 +78,10 @@ header {
     @media screen and (max-width: 600px) {
       width: 70%;
     }
+
+    // span {
+    //   font-size: 0.8rem;
+    // }
   }
 
   #arrow {

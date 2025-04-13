@@ -86,6 +86,7 @@ header nav li a:hover {
   background: var(--white1);
   cursor: pointer;
   color: var(--color1);
+  border-radius: 2px;
 }
 header h1 {
   margin: 100px auto 50px auto;
@@ -138,7 +139,7 @@ header #arrow:hover {
 }
 
 main {
-  height: 100vh;
+  padding-bottom: 10px;
 }
 main .section {
   background: rgba(214, 222, 231, 0.768);
