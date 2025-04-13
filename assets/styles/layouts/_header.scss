@@ -73,6 +73,10 @@ header {
     background: rgba(147, 182, 209, 0.537);
     box-shadow: 0 0 12px 6px rgba(147, 182, 209, 0.540);
     color: var(--white1);
+
+    @media screen and (max-width: 600px) {
+      width: 70%;
+    }
   }
 
   #arrow {
