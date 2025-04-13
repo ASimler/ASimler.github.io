@@ -7,6 +7,7 @@
   --white2: rgba(237, 237, 237, 0.263);
   --black1: rgb(53, 53, 53);
   --color1: rgb(66, 136, 194);
+  --color2: rgba(66, 136, 194, 0.68);
 }
 
 html {
@@ -49,9 +50,11 @@ header::after {
   left: 10%;
 }
 header nav {
-  margin: 20px auto;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%);
   width: 80%;
-  max-width: 750px;
   background: var(--white2);
   border-radius: 2px;
   transition: 0.2s;

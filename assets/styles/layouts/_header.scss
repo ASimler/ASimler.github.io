@@ -15,9 +15,12 @@ header {
   }
 
   nav {
-    margin: 20px auto;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
     width: 80%;
-    max-width: 750px;
+    // max-width: 750px;
     background: var(--white2);
     border-radius: 2px;
     transition: 0.2s;
