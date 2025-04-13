@@ -106,11 +106,6 @@ header .textIntro {
   box-shadow: 0 0 12px 6px rgba(147, 182, 209, 0.54);
   color: var(--white1);
 }
-@media screen and (max-width: 600px) {
-  header .textIntro {
-    font-size: 0.9rem;
-  }
-}
 header #arrow {
   margin: 10% auto;
   border: 3px solid var(--white1);
