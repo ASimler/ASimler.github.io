@@ -7,7 +7,7 @@
   --white2: rgba(237, 237, 237, 0.263);
   --black1: rgb(53, 53, 53);
   --color1: rgb(66, 136, 194);
-  --color2: rgba(66, 136, 194, 0.68);
+  --color2: rgba(208, 232, 252, 0.735);
 }
 
 html {
@@ -34,8 +34,12 @@ body a:visited {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Fredericka";
+  src: url(./../fonts/FrederickatheGreat-Regular.ttf);
+}
 header {
-  height: 100vh;
+  height: 80vh;
   text-align: center;
   position: relative;
 }
@@ -46,7 +50,7 @@ header::after {
   margin: 0 auto;
   height: 1px;
   background: var(--white1);
-  bottom: 50px;
+  bottom: 100px;
   left: 10%;
 }
 header nav {
@@ -92,8 +96,10 @@ header nav li a:hover {
   border-radius: 2px;
 }
 header h1 {
-  margin: 100px auto 50px auto;
-  font-size: 3rem;
+  margin: 150px auto 50px auto;
+  font-family: Fredericka;
+  font-size: 4rem;
+  font-weight: lighter;
   color: var(--white1);
 }
 @media screen and (max-width: 600px) {
@@ -109,6 +115,7 @@ header .textIntro {
   background: rgba(147, 182, 209, 0.537);
   box-shadow: 0 0 12px 6px rgba(147, 182, 209, 0.54);
   color: var(--white1);
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 600px) {
   header .textIntro {
@@ -116,7 +123,7 @@ header .textIntro {
   }
 }
 header #arrow {
-  margin: 10% auto;
+  margin: 100px auto;
   border: 3px solid var(--white1);
   border-radius: 150px;
   width: 80px;
@@ -140,6 +147,11 @@ header #arrow:hover {
     height: 70px;
   }
 }
+@media screen and (max-height: 590px) {
+  header #arrow {
+    margin: 50px auto;
+  }
+}
 
 main {
   padding-bottom: 10px;
@@ -149,8 +161,24 @@ main .section {
   width: 80%;
   margin: 30px auto;
   border-radius: 5px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
 main .section h2 {
   padding-bottom: 30px;
+}
+main .s1-left, main .s2-right, main .s3-left, main .s4-right {
+  padding: 20px;
+}
+main .s1-right {
+  background: url(./../img/BG-CodeTP.png) center/cover;
+}
+main .s2-left {
+  background: url(./../img/jewelryBG.png) center/cover;
+}
+main .s3-right {
+  background: url(./../img/photoBG2.webp) center/cover;
+}
+main .s4-left {
+  background: url(./../img/chill.jpg) center/cover;
 }/*# sourceMappingURL=index.css.map */

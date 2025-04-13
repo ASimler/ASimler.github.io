@@ -10,7 +10,7 @@ window.addEventListener("scroll", (e) => {
   console.log(scrollValue);
 
   // Une fois le scroll commencé on le compare avec la variable scrollValue
-  if (window.scrollY < scrollValue) {
+  if (window.scrollY < 15) {
     nav.style.top = "20px";
     nav.style.background = "var(--white2)";
     nav.style.width = "80%";

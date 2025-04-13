@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "Fredericka";
+  src: url(./../fonts/FrederickatheGreat-Regular.ttf);
+}
+
 header {
-  height: 100vh;
+  height: 80vh;
   text-align: center;
   position: relative;
 
@@ -10,7 +15,7 @@ header {
     margin: 0 auto;
     height: 1px;
     background: var(--white1);
-    bottom: 50px;
+    bottom: 100px;
     left: 10%;
   }
 
@@ -60,8 +65,10 @@ header {
   }
   
   h1 {
-    margin: 100px auto 50px auto;
-    font-size: 3rem;
+    margin: 150px auto 50px auto;
+    font-family: Fredericka;
+    font-size: 4rem;
+    font-weight: lighter;
     color: var(--white1);
 
     @media screen and (max-width: 600px) {
@@ -77,6 +84,7 @@ header {
     background: rgba(147, 182, 209, 0.537);
     box-shadow: 0 0 12px 6px rgba(147, 182, 209, 0.540);
     color: var(--white1);
+    font-size: 1.2rem;
 
     @media screen and (max-width: 600px) {
       width: 70%;
@@ -88,7 +96,7 @@ header {
   }
 
   #arrow {
-    margin: 10% auto;
+    margin: 100px auto;
     border: 3px solid var(--white1);
     border-radius: 150px;
     width: 80px;
@@ -110,6 +118,10 @@ header {
       font-size: 2rem;
       width: 70px;
       height: 70px;
+    }
+
+    @media screen and (max-height: 590px) {
+      margin: 50px auto;
     }
 
   }

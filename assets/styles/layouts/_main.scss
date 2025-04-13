@@ -6,10 +6,28 @@ main {
         width: 80%;
         margin: 30px auto;
         border-radius: 5px;
-        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
 
         h2 {
             padding-bottom: 30px;
         }
+    }
+
+    .s1-left, .s2-right, .s3-left, .s4-right {
+        padding: 20px;
+    }
+
+    .s1-right {
+        background: url(./../img/BG-CodeTP.png) center/cover;
+    }
+    .s2-left {
+        background: url(./../img/jewelryBG.png) center/cover;
+    }
+    .s3-right {
+        background: url(./../img/photoBG2.webp) center/cover;
+    }
+    .s4-left {
+        background: url(./../img/chill.jpg) center/cover;
     }
 }
