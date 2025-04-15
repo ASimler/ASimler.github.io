@@ -99,8 +99,8 @@ a, a:visited {
 main .title {
   background: var(--color3);
   width: 50%;
-  margin: 0 auto;
   border-radius: 7px;
+  margin: 20px auto 40px auto;
 }
 @media screen and (max-width: 530px) {
   main .title {
@@ -113,11 +113,10 @@ main .title {
     margin-right: 10px;
   }
 }
-main .title h1 {
+main .title h1, main .title h2 {
   font-family: Cousine;
   font-size: 2.5rem;
   text-align: center;
-  margin: 20px auto 40px auto;
   color: var(--color1);
   padding: 15px;
   -webkit-user-select: none;
@@ -126,23 +125,34 @@ main .title h1 {
   transition: 0.2s;
 }
 @media screen and (max-width: 530px) {
-  main .title h1 {
+  main .title h1, main .title h2 {
     font-size: 2rem;
   }
 }
 @media screen and (max-width: 350px) {
-  main .title h1 {
+  main .title h1, main .title h2 {
     font-size: 1.7rem;
   }
 }
+main .title h2 {
+  padding-top: 0;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 350px) {
+  main .title h2 {
+    font-size: 1rem;
+  }
+}
 main .projects-container {
-  display: flex;
-  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 90%;
   margin: 0 auto;
 }
 @media screen and (max-width: 893px) {
   main .projects-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 37% 63%;
   }
 }
 main .projects-container .projects {
@@ -161,4 +171,31 @@ main .projects-container .projects {
   main .projects-container .projects {
     margin: 20px;
   }
+}
+main .projects-container .projects h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding-bottom: 15px;
+  color: var(--color3);
+}
+main .projects-container .projects .TpList {
+  font-weight: bold;
+}
+main .projects-container .projects .TpList li {
+  padding: 5px;
+  transition: 0.2s;
+}
+main .projects-container .projects .TpList li:hover {
+  color: var(--color2);
+  transform: scale(1.2);
+}
+main .projects-container .projects .TpList li a, main .projects-container .projects .TpList li a:visited {
+  color: var(--black1);
+  font-size: 1.2rem;
+}
+main .projects-container .projects .TpList li a {
+  transition: 0.2s;
+}
+main .projects-container .projects .TpList li a:hover {
+  color: var(--color2);
 }/*# sourceMappingURL=index.css.map */

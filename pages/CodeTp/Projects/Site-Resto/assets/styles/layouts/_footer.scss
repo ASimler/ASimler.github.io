@@ -1,0 +1,61 @@
+body {
+    footer {
+        background: url(../img/bg-footer.jpg) center/cover;
+
+        .footer-container {
+            width: 70%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            
+    
+            .footer-left {
+                padding: 50px 50px 50px 0;
+
+                p {
+                    font-size: 0.8rem;
+                    color: $color4;
+                    line-height: 25px;
+                }
+            }
+
+            .footer-right {
+                padding: 50px 0 50px 50px;
+
+                h6 {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+
+                input {
+                    background: none;
+                    border: 1px solid #a6724546;
+                    border-radius: 2px;
+                    padding: 10px;
+                    width: 50%;
+                    margin: 15px 0 50px 0;
+                }
+
+                .networks {
+                    max-width: 300px;
+                    display: grid;
+                    grid-template-columns: 25% 75%;
+                    align-items: center;
+
+                    ul {
+                        display: flex;
+                        justify-content: space-around;
+
+                        li {
+                            a {
+                                font-size: 0.8rem;
+                                color: $color4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

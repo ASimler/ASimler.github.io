@@ -1,0 +1,110 @@
+// Fonts import
+@font-face {
+  font-family: "Font1";
+  src: url(../fonts/Allura-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Font3";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+// Variables
+$white1: white;
+$white2: rgb(238, 238, 236);
+$black1: black;
+$black2: #21201E;
+$color1: #A67245;
+$color2: rgb(199, 199, 199);
+$color3: rgb(194, 194, 194);
+$color4: rgb(160, 160, 160);
+
+// Mixins
+@mixin datestyle {
+  background: $black2;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .day {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: Font3;
+  background: $black2;
+  color: $white1;
+
+  span {
+    font-family: Font1;
+    font-size: 3rem;
+    color: $color1;
+  }
+
+  a, a:visited {
+    color: $white1;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  h1 {
+    font-family: Font2;
+    text-transform: uppercase;
+    color: $white2;
+    font-size: 5rem;
+    letter-spacing: 6px;
+    line-height: 50px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-family: Font2;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 10px;
+  }
+
+  h5 {
+    color: $black2;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding: 10px 0 20px 0;
+}
+
+.adress {
+  font-size: 0.8rem;
+  color: rgb(165, 165, 165);
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+.buy {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+  img {
+    padding: 30px 0;
+  }
+}

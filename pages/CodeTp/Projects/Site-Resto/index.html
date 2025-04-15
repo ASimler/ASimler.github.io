@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 4 - Site Resto</title>
+
+    <!-- Balises Meta -->
+    <meta name="description" content="Site web d'un grand restaurant. Miam !" />
+
+    <!-- Link for stylesheet -->
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+
+    <!-- Link for fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- ================================ HEADER ================================ -->
+    <header>
+      <nav class="nav-header">
+        <ul class="nav-left">
+          <li><span>Resto</span></li>
+        </ul>
+
+        <ul class="nav-mid">
+          <li>Home</li>
+          <li>Reservations</li>
+          <li>Menu</li>
+          <li>Blog</li>
+          <li>Pages</li>
+          <li>Shop</li>
+          <li>Contact</li>
+        </ul>
+
+        <ul class="nav-right">
+          <li>
+            <a href="https://www.facebook.com/?locale=fr_FR"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com/?lang=fr"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-container">
+        <span>Welcome to</span>
+        <h1>The resto</h1>
+        <img
+          src="./assets/img/ic-plate-big.png"
+          alt="Logo couteau/fourchette"
+        />
+        <p>We serve only the freshest ingredients !</p>
+      </div>
+    </header>
+
+    <!-- ================================ MAIN ================================ -->
+    <main>
+      <!-- ------------------------------- SECTION 1 ------------------------------- -->
+      <section class="sec1">
+        <div class="sec1-left">
+          <div class="sec1-left-container">
+            <span>Discover</span>
+            <h2>Our store</h2>
+            <img
+              id="logo-resto-gray"
+              src="./assets/img/ic-plate.png"
+              alt="Icone couteau/fouchette gris"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+              necessitatibus porro sequi id sed, natus corporis dolore ipsum
+              doloremque. Soluta suscipit laudantium a laboriosam! Natus et
+              incidunt dolore delectus ratione.
+            </p>
+            <div class="avatar"></div>
+            <p class="name">Russel Stephens</p>
+            <p class="function">Chef Cook</p>
+          </div>
+        </div>
+        <div class="sec1-right">
+          <!-- Insertion de l'image en bg css -->
+        </div>
+      </section>
+
+      <!-- ------------------------------- SECTION 2 ------------------------------- -->
+      <section class="sec2">
+        <div class="sec2-title">
+          <span>Discover</span>
+          <img
+            id="logo-resto-gray"
+            src="./assets/img/ic-plate.png"
+            alt="Icone couteau/fouchette gris"
+          />
+        </div>
+
+        <nav class="nav-main">
+          <ul>
+            <li>Breakfast</li>
+            <li>Lunch</li>
+            <li>Dinner</li>
+            <li>Drinks</li>
+            <li>Other</li>
+          </ul>
+        </nav>
+
+        <div class="sec2-container">
+          <!-- *************************** Left part *************************** -->
+          <div class="sec2-menus-container">
+            <!-- ********************** Encart 1 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-01.jpg"
+                  alt="Assiette de tagliatelles aux champignons"
+                />
+              </div>
+              <div>
+                <h3>Italian source mushroom</h3>
+                <p>Mushroom / Garlic / Veggies</p>
+              </div>
+              <div>
+                <p class="price">$12</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 2 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-03.jpg"
+                  alt="Assiette de légumes et leur thon"
+                />
+              </div>
+              <div>
+                <h3>Tenu roast source</h3>
+                <p>Tuna / Potatoes / Rice</p>
+              </div>
+              <div>
+                <p class="price">$15</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 3 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-05.jpg"
+                  alt="Assiette de poulet mariné"
+                />
+              </div>
+              <div>
+                <h3>Salted fried chicken</h3>
+                <p>Chicken / Olive oil / Salt</p>
+              </div>
+              <div>
+                <p class="price">$20</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 4 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-07.jpg"
+                  alt="Patates douces rôties au saumon"
+                />
+              </div>
+              <div>
+                <h3>Imported salmon staak</h3>
+                <p>Salmon / Veggies / Oil</p>
+              </div>
+              <div>
+                <p class="price">$16</p>
+              </div>
+            </div>
+            <!-- End left part -->
+          </div>
+          <!-- *************************** Right part *************************** -->
+          <div class="sec2-menus-container">
+            <!-- ********************** Encart 5 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-02.jpg"
+                  alt="Assiette de poulet frittes"
+                />
+              </div>
+              <div>
+                <h3>Fried potatoes with garlic</h3>
+                <p>Potatoes / Olive oil / Garlic</p>
+              </div>
+              <div>
+                <p class="price">$22</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 6 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-04.jpg"
+                  alt="Assiette de casseler et ses carottes"
+                />
+              </div>
+              <div>
+                <h3>Roast pork (4 sticks)</h3>
+                <p>Pork / Veggies / Shoyu</p>
+              </div>
+              <div>
+                <p class="price">$18</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 7 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-06.jpg"
+                  alt="Assiette de petits choux"
+                />
+              </div>
+              <div>
+                <h3>Crab xith curry sources</h3>
+                <p>Crab / Potatoes / Rice</p>
+              </div>
+              <div>
+                <p class="price">$14</p>
+              </div>
+            </div>
+            <!-- ********************** Encart 8 ********************** -->
+            <div class="menus">
+              <div>
+                <img
+                  src="./assets/img/dish-item-08.jpg"
+                  alt="Poelée de pommes de terre assaisonnées"
+                />
+              </div>
+              <div>
+                <h3>Baked potato pizza</h3>
+                <p>Potato / Bread / Cheese</p>
+              </div>
+              <div>
+                <p class="price">$25</p>
+              </div>
+            </div>
+          </div>
+          <!-- End right part -->
+        </div>
+        <!-- End sec2-container -->
+      </section>
+
+      <!-- ------------------------------- SECTION 3 ------------------------------- -->
+      <section class="sec3">
+        <div class="sec3-container">
+          <!-- *************************** Left part *************************** -->
+          <div class="sec3-left">
+            <div class="sec3-left-container">
+              <span>Time</span>
+              <h2>Open</h2>
+              <img
+                id="logo-resto-gray"
+                src="./assets/img/ic-plate.png"
+                alt="Icone couteau/fouchette gris"
+              />
+              <h4>Monday - Friday</h4>
+              <p>7AM - 11AM (Breakfast) <br />11AM - 10PM (Luch/Dinner)</p>
+              <h4>Saturday - Sunday</h4>
+              <p>8AM - 1PM (Brunch) <br />1PM - 9PM (Luch/Dinner)</p>
+              <h4>+15 890 979 25 52</h4>
+            </div>
+          </div>
+
+          <!-- *************************** Left part *************************** -->
+          <div class="sec3-right">
+            <div class="sec3-right-container">
+              <div class="sec3-right-title">
+                <span>Reservation</span>
+                <h2>Online Booking</h2>
+                <img
+                  id="logo-resto-gray"
+                  src="./assets/img/ic-plate.png"
+                  alt="Icone couteau/fouchette gris"
+                />
+              </div>
+              <form action="#" method="post">
+                <!-- il faut mettre les inputs dans des div pour pouvoir leur mettre un ::before -->
+                <div class="inp-with-before">
+                  <!-- <input list="Number-of-people" id="Nb-people" placeholder="People"/>
+                  <i id="datalist-icon" class="fa-solid fa-chevron-down"></i>
+                  <datalist id="Number-of-people">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                  </datalist> -->
+
+                  <select
+                    name="Number-of-people"
+                    id="Nb-people"
+                    placeholder="People"
+                  >
+                    <option value="">People</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="inp-with-before">
+                  <input
+                    type="date"
+                    id="date"
+                    name="booking-date"
+                    value="2025-03-17"
+                    min="2025-03-17"
+                  />
+                </div>
+                <div class="inp-with-before">
+                  <input
+                    type="time"
+                    id="time"
+                    name="booking-time"
+                    min="07:00"
+                    max="21:00"
+                  />
+                </div>
+                <div class="inp-with-before">
+                  <input type="text" id="name" placeholder="Name" />
+                </div>
+                <div class="inp-with-before">
+                  <input type="text" id="phone-number" placeholder="Phone" />
+                </div>
+                <div class="inp-with-before">
+                  <input type="text" id="email" placeholder="Email" />
+                </div>
+                <div class="btn-submit">
+                  <input type="submit" id="submit" value="Book Now" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------- SECTION 4 ------------------------------- -->
+      <section class="sec4">
+        <div class="sec4-title">
+          <span>Upcoming</span>
+          <h2>Our event</h2>
+          <img
+            id="logo-resto-gray"
+            src="./assets/img/ic-plate.png"
+            alt="Icone couteau/fouchette gris"
+          />
+        </div>
+
+        <div class="sec4-main">
+          <!-- *************************** Left part *************************** -->
+          <!-- *************************** Main part *************************** -->
+          <div class="sec4-main-container">
+            <!-- Fisrt child -->
+            <div class="sec4-main-1">
+              <div class="sec4-ml-top">
+                <div class="date">
+                  <p class="day">08</p>
+                  <p class="month">July</p>
+                </div>
+              </div>
+              <div class="sec4-ml-right">
+                <h5>Night Inspirescu Party</h5>
+                <p class="adress">
+                  <i class="fa-solid fa-location-dot"></i> Restaurant Resto
+                  <i class="fa-regular fa-clock"></i> 10:00pm - 6:00am
+                </p>
+                <p class="buy">Buy tickets</p>
+              </div>
+            </div>
+
+            <!-- Second child -->
+            <div class="sec4-main-2">
+              <div class="sec4-ml-bottom">
+                <div class="date">
+                  <p class="day">09</p>
+                  <p class="month">July</p>
+                </div>
+              </div>
+              <div class="sec4-ml-right">
+                <h5>DJ RobagRuhme</h5>
+                <p class="adress">
+                  <i class="fa-solid fa-location-dot"></i> Restaurant Resto
+                  <i class="fa-regular fa-clock"></i> 10:00pm - 6:00am
+                </p>
+                <p class="buy">Buy tickets</p>
+              </div>
+            </div>
+
+            <!-- Third child -->
+            <div class="sec4-main-3">
+              <div class="sec4-mr-container">
+                <div class="date">
+                  <p class="day">10</p>
+                  <p class="month">July</p>
+                </div>
+                <h5>Thousand celebrities at Johnnie Night</h5>
+                <p class="adress">
+                  <i class="fa-solid fa-location-dot"></i> Restaurant Resto
+                  <i class="fa-regular fa-clock"></i> 10:00pm - 6:00am
+                </p>
+                <p class="buy">Buy tickets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------- SECTION 5 ------------------------------- -->
+      <section class="sec5">
+        <div>
+          <p class="sec5-text">
+            <!-- <span class="fa-solid fa-quote-left"></span> -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            nulla, soluta asperiores modi amet illo eligendi fuga necessitatibus
+            dolorum, in omnis at ipsum minima ex maxime minus alias dolores quas
+            natus recusandae earum. Quo, pariatur odio temporibus laborum quia
+            tempora.
+            <!-- <span class="fa-solid fa-quote-right"></span> -->
+          </p>
+          <p class="name">Russel Stephens</p>
+          <p class="function">CEO - HeadPassion</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================ FOOTER ================================ -->
+    <footer>
+      <div class="footer-container">
+        <!-- *************************** Left part *************************** -->
+        <div class="footer-left">
+          <span>Resto</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+            excepturi! Aliquam debitis ipsa beatae sunt enim architecto, maxime
+            blanditiis, ea amet voluptatum dolorum error rerum!
+          </p>
+        </div>
+        <!-- *************************** Right part *************************** -->
+        <div class="footer-right">
+          <div>
+            <h6>Newsletter</h6>
+            <input
+              type="text"
+              id="footer-email"
+              placeholder="Your email address"
+            />
+          </div>
+          <div class="networks">
+            <h6>FOLLOW US :</h6>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

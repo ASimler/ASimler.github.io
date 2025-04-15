@@ -1,0 +1,81 @@
+body {
+  header {
+    height: 100vh;
+    background: url(../img/bg-slider-06.jpg) center/cover;
+    color: $white1;
+
+    nav {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+
+        span {
+          font-weight: 800;
+        }
+      }
+
+      .nav-mid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        font-size: 0.8rem;
+        text-transform: uppercase;
+
+        li {
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            font-weight: bolder;
+            font-size: 0.9rem;
+            color: $color1;
+          }
+        }
+      }
+
+      .nav-right {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: 0.2s;
+
+        li:hover {
+          transform: scale(1.2);
+          i {
+            color: $color1;
+          }
+        }
+      }
+    }
+    .header-container {
+      width: 50%;
+      height: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      span {
+        font-size: 4rem;
+      }
+
+      img {
+        padding: 80px 0;
+      }
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 6px;
+      }
+    }
+  }
+}

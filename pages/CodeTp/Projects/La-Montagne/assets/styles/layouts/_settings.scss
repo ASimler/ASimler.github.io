@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Font1";
+  src: url(../fonts/Inter_18pt-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url(../fonts/Merriweather_24pt-Light.ttf);
+}
+
+// Variables
+$color1: #F3F3F3;
+$color2: rgb(154, 239, 245);
+$color3: rgb(231, 97, 8);
+$black: rgb(65, 65, 65);
+$barcolor: rgba(128, 128, 128, 0.212);
+$footer-title-color : rgb(83, 83, 83);
+
+// Mixins
+@mixin title {
+  font-family: Font1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+  // Permet de ralentir la descente lors du clic sur la flèche du header
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: url(../img/bg.jpg) center/cover fixed;
+  font-family: Font2;
+  max-width: 1900px;
+  margin: 0 auto;
+
+  // Créer l'animation : apparition du body depuis un écran noir :
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 10, 2);
+    animation: animBefore 2s ease forwards;
+    // forwards = tu restes dans l'état dans lequel tu termines
+    animation-delay: 0.15s; 
+    // déclenchement au bout de 0.15sec
+
+    @keyframes animBefore {
+      to {
+        opacity: 0%;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  a, a:visited {
+    color: $color1;
+    text-decoration: none;
+  }
+
+  .button {
+    padding: 15px 40px;
+    border: 2px solid $black;
+    background: none;
+    @include title;
+    font-size: 1rem;
+    margin: 60px auto 50px auto;
+    transition: 0.2s;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media screen and (max-width: 700px) {
+      font-size: 0.9rem;
+      padding: 10px 30px;
+      margin: 30px auto;
+    }
+
+    &:hover {
+      transform: rotate(5deg);
+      border-radius: 10px;
+      border-color: $color2;
+      background: $color2;
+      color: $color3;
+    }
+  }
+  
+  #second-btn:hover {
+    transform: rotate(-5deg);
+  }
+
+}
