@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Bellota";
+  src: url(./../../assets/fonts/BellotaText-Light.ttf);
+}
+@font-face {
+  font-family: "Cousine";
+  src: url(./../../assets/fonts/Cousine-Regular.ttf);
+}
+:root {
+  --white1: rgba(233, 233, 233, 0.74);
+  --black1: rgba(39, 39, 39, 0.9);
+  --color1: #e88a1e;
+  --color2: #60e8ed;
+  --color3: rgba(2, 23, 36, 0.671);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: url(./../../assets/img/BG-CodeTP2.png) center/cover fixed;
+  color: var(--white1);
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--white1);
+}
+
+/* SIDE BAR */
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: var(--color3);
+  top: 0;
+  left: -230px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+  /* Si .active existe alors les spans : */
+}
+#side-bar.active {
+  left: 0;
+  /* left: 0px !important; */
+  /* On peut faire avec le !important mais ici vu que l'id et la classe sont dans la même division on peut écrire sur les param de cette class : #sidebar.active {} = si jamais #sidebar a la class .active alors {} */
+}
+#side-bar .active span {
+  position: absolute;
+}
+#side-bar .active span:nth-child(1) {
+  transform: rotate(45deg);
+  background: var(--white1);
+}
+#side-bar .active span:nth-child(2) {
+  opacity: 0;
+}
+#side-bar .active span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: var(--white1);
+}
+#side-bar .active ~ main {
+  opacity: 0.3;
+}
+#side-bar .toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+#side-bar .toggle-btn span {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--color2);
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+#side-bar li {
+  color: var(--white1);
+  list-style: none;
+  font-family: Cousine;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-left: 0px;
+}
+#side-bar li:hover {
+  background: var(--color2);
+  color: var(--black1);
+}
+
+main .title {
+  background: var(--color3);
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 7px;
+}
+@media screen and (max-width: 530px) {
+  main .title {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 350px) {
+  main .title {
+    width: 70%;
+    margin-right: 10px;
+  }
+}
+main .title h1 {
+  font-family: Cousine;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px auto 40px auto;
+  color: var(--color1);
+  padding: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.2s;
+}
+@media screen and (max-width: 530px) {
+  main .title h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  main .title h1 {
+    font-size: 1.7rem;
+  }
+}
+main .projects-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 893px) {
+  main .projects-container {
+    flex-direction: column;
+  }
+}
+main .projects-container .projects {
+  background: var(--white1);
+  margin: 50px 30px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 7px 1px var(--color2);
+  color: var(--black1);
+  font-family: Cousine;
+  text-align: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+@media screen and (max-width: 893px) {
+  main .projects-container .projects {
+    margin: 20px;
+  }
+}/*# sourceMappingURL=index.css.map */
