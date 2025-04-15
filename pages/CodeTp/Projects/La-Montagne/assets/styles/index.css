@@ -14,8 +14,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style: none;
 }
 
@@ -33,15 +32,8 @@ body::before {
   top: 0;
   left: 0;
   background-color: rgb(19, 10, 2);
-  -webkit-animation: animBefore 2s ease forwards;
-          animation: animBefore 2s ease forwards;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
-}
-@-webkit-keyframes animBefore {
-  to {
-    opacity: 0%;
-  }
+  animation: animBefore 2s ease forwards;
+  animation-delay: 0.15s;
 }
 @keyframes animBefore {
   to {
@@ -49,11 +41,8 @@ body::before {
   }
 }
 body ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 body a, body a:visited {
   color: #F3F3F3;
@@ -68,7 +57,6 @@ body .button {
   letter-spacing: 2px;
   font-size: 1rem;
   margin: 60px auto 50px auto;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
   transition: 0.2s;
@@ -81,16 +69,14 @@ body .button {
   }
 }
 body .button:hover {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  transform: rotate(5deg);
   border-radius: 10px;
   border-color: rgb(154, 239, 245);
   background: rgb(154, 239, 245);
   color: rgb(231, 97, 8);
 }
 body #second-btn:hover {
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 body header {
@@ -98,19 +84,10 @@ body header {
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 @media screen and (max-width: 450px) {
@@ -119,23 +96,13 @@ body header {
   }
 }
 body header .header-container {
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
+  transform: translateY(40px);
   opacity: 0;
-  -webkit-animation: animHeader 1.5s ease forwards;
-          animation: animHeader 1.5s ease forwards;
-}
-@-webkit-keyframes animHeader {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
+  animation: animHeader 1.5s ease forwards;
 }
 @keyframes animHeader {
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -146,7 +113,6 @@ body header .header-container h1 {
   font-size: 5rem;
   letter-spacing: 6px;
   color: #F3F3F3;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 @media screen and (max-width: 1130px) {
@@ -197,26 +163,18 @@ body header .header-container a {
   height: 74px;
   border: 2px solid #F3F3F3;
   border-radius: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   color: #F3F3F3;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 body header .header-container a:hover {
   border: 2px solid rgb(154, 239, 245);
   width: 60px;
   height: 60px;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   color: rgb(154, 239, 245);
 }
 @media screen and (max-width: 440px) {
@@ -232,15 +190,9 @@ body header .nav-network {
   width: 100%;
   margin: 0 auto;
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   bottom: 0;
   color: #F3F3F3;
@@ -249,9 +201,7 @@ body header .nav-network {
 }
 @media screen and (max-width: 1115px) {
   body header .nav-network {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
 }
 body header .nav-network nav:hover li:not(:hover) {
@@ -264,16 +214,11 @@ body header .nav-network nav ul {
 body header .nav-network nav ul li {
   height: 100%;
   padding: 0 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.9rem;
   position: relative;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 body header .nav-network nav ul li:first-child {
@@ -284,12 +229,8 @@ body header .nav-network nav ul li:first-child {
   body header .nav-network nav ul li {
     font-size: 0.8rem;
     text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 1111px) {
@@ -329,27 +270,19 @@ body header .nav-network .network {
 body header .nav-network .network ul {
   min-width: 100px;
   max-width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 body header .nav-network .network ul li {
   font-size: 1.3rem;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 body header .nav-network .network ul li i {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 body header .nav-network .network ul li i:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
   color: rgb(154, 239, 245);
 }
 
@@ -396,13 +329,11 @@ body main .main-top h2 {
 body main .main-top h2::before, body main .main-top h2::after {
   content: "";
   position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 1px;
   width: 35%;
   background: rgba(128, 128, 128, 0.212);
   top: 50%;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 @media screen and (max-width: 1100px) {
@@ -428,7 +359,6 @@ body main .main-top h2::after {
 }
 body main .main-top h3 {
   font-size: 2.5rem;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 @media screen and (max-width: 700px) {
@@ -449,7 +379,6 @@ body main .main-top p {
   font-style: italic;
   font-size: 1rem;
   line-height: 40px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 @media screen and (max-width: 700px) {
@@ -485,9 +414,7 @@ body main .main-bottom::after {
 body main .main-bottom .main-bottom-container {
   display: grid;
   grid-template-columns: 50% 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1100px) {
   body main .main-bottom .main-bottom-container {
@@ -563,16 +490,9 @@ body footer .footer-left form {
   gap: 10px;
 }
 body footer .footer-left form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 body footer .footer-left form div input[type=text],
 body footer .footer-left form div textarea {
@@ -582,9 +502,7 @@ body footer .footer-left form div textarea {
   border-radius: 5px;
   resize: none;
   line-height: 1;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  flex: 0 1 auto;
   font-size: 1.2rem;
 }
 body footer .footer-left form div input[type=text]:focus,
@@ -606,10 +524,8 @@ body footer .footer-left form div input[type=submit]:hover {
   background: gray;
   color: #F3F3F3;
   border-radius: 10px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: rotate(0deg);
+  transform: scale(0.9);
 }
 body footer .footer-right {
   display: grid;
@@ -617,9 +533,7 @@ body footer .footer-right {
   border-left: 1px solid rgba(128, 128, 128, 0.212);
 }
 body footer .footer-right .fdivs-right {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   display: grid;
   grid-template-columns: 30% 70%;
   align-items: center;
@@ -651,9 +565,7 @@ body footer .footer-right .fdivs-right p {
   }
 }
 body footer .footer-right .fdivs-right ul {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
 }
 body footer .footer-right .fdivs-right ul li {
   padding-right: 15px;
@@ -670,16 +582,9 @@ body footer .footer-right .fdivs-right ul li a {
   font-size: 1.2rem;
   border: 1px solid rgba(128, 128, 128, 0.212);
   border-radius: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.3s;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s;
 }
 @media screen and (max-width: 560px) {

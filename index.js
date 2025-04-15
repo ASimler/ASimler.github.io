@@ -13,7 +13,7 @@ window.addEventListener("scroll", (e) => {
   if (window.scrollY < 15) {
     nav.style.top = "20px";
     nav.style.background = "var(--white2)";
-    nav.style.width = "80%";
+    nav.style.width = "95%";
   } else {
     nav.style.top = "0px";
     nav.style.background = "var(--color2)";

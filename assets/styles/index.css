@@ -58,7 +58,7 @@ header nav {
   left: 50%;
   top: 20px;
   transform: translate(-50%);
-  width: 80%;
+  width: 95%;
   background: var(--white2);
   border-radius: 2px;
   transition: 0.2s;
@@ -98,13 +98,21 @@ header nav li a:hover {
 header h1 {
   margin: 150px auto 50px auto;
   font-family: Fredericka;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: lighter;
   color: var(--white1);
+  transition: 0.2s;
 }
 @media screen and (max-width: 600px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 3.5rem;
+    width: 80%;
   }
 }
 header .textIntro {
