@@ -14,24 +14,6 @@
             /* left: 0px !important; */
             /* On peut faire avec le !important mais ici vu que l'id et la classe sont dans la même division on peut écrire sur les param de cette class : #sidebar.active {} = si jamais #sidebar a la class .active alors {} */
           }
-          /* Si .active existe alors les spans : */
-          .active span {
-            position: absolute;
-          }
-          .active span:nth-child(1) {
-            transform: rotate(45deg);
-            background: var(--white1);
-          }
-          .active span:nth-child(2) {
-            opacity: 0;
-          }
-          .active span:nth-child(3) {
-            transform: rotate(-45deg);
-            background: var(--white1);
-          }
-          .active ~ main {
-            opacity: 0.3;
-          }
           
           .toggle-btn {
             position: absolute;
@@ -66,4 +48,24 @@
             }
           }
       }
+
+      /* Si .active existe alors les spans : */
+      .active span {
+        position: absolute;
+      }
+      .active span:nth-child(1) {
+        transform: rotate(45deg);
+        background: var(--white1);
+      }
+      .active span:nth-child(2) {
+        opacity: 0;
+      }
+      .active span:nth-child(3) {
+        transform: rotate(-45deg);
+        background: var(--white1);
+      }
+      .active ~ main {
+        opacity: 0.3;
+      }
+      
       

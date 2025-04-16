@@ -42,29 +42,11 @@ a, a:visited {
   left: -230px;
   transition: 0.5s ease-out;
   z-index: 4;
-  /* Si .active existe alors les spans : */
 }
 #side-bar.active {
   left: 0;
   /* left: 0px !important; */
   /* On peut faire avec le !important mais ici vu que l'id et la classe sont dans la même division on peut écrire sur les param de cette class : #sidebar.active {} = si jamais #sidebar a la class .active alors {} */
-}
-#side-bar .active span {
-  position: absolute;
-}
-#side-bar .active span:nth-child(1) {
-  transform: rotate(45deg);
-  background: var(--white1);
-}
-#side-bar .active span:nth-child(2) {
-  opacity: 0;
-}
-#side-bar .active span:nth-child(3) {
-  transform: rotate(-45deg);
-  background: var(--white1);
-}
-#side-bar .active ~ main {
-  opacity: 0.3;
 }
 #side-bar .toggle-btn {
   position: absolute;
@@ -94,6 +76,29 @@ a, a:visited {
 #side-bar li:hover {
   background: var(--color2);
   color: var(--black1);
+}
+
+/* Si .active existe alors les spans : */
+.active span {
+  position: absolute;
+}
+
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+  background: var(--white1);
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: var(--white1);
+}
+
+.active ~ main {
+  opacity: 0.3;
 }
 
 main .title {
