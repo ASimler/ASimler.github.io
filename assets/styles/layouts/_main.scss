@@ -1,5 +1,17 @@
 main {
     padding-bottom: 10px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        margin: 0 auto;
+        height: 1px;
+        background: var(--white1);
+        top: -50px;
+        left: 10%;
+      }
     
     .section {
         background: rgba(214, 222, 231, 0.768);

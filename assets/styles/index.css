@@ -43,16 +43,6 @@ header {
   text-align: center;
   position: relative;
 }
-header::after {
-  content: "";
-  position: absolute;
-  width: 80%;
-  margin: 0 auto;
-  height: 1px;
-  background: var(--white1);
-  bottom: 100px;
-  left: 10%;
-}
 header nav {
   position: fixed;
   left: 50%;
@@ -163,6 +153,17 @@ header #arrow:hover {
 
 main {
   padding-bottom: 10px;
+  position: relative;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background: var(--white1);
+  top: -50px;
+  left: 10%;
 }
 main .section {
   background: rgba(214, 222, 231, 0.768);

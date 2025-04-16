@@ -8,17 +8,6 @@ header {
   text-align: center;
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    height: 1px;
-    background: var(--white1);
-    bottom: 100px;
-    left: 10%;
-  }
-
   nav {
     position: fixed;
     left: 50%;
