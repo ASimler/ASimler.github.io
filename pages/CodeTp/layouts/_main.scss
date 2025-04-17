@@ -15,8 +15,9 @@ main {
         }
 
         h1, h2 {
-            font-family: Cousine;
-            font-size: 2.5rem;
+            font-family: Fredericka;
+            font-size: 3.3rem;
+            font-weight: lighter;
             text-align: center;
 
             color: var(--color1);
@@ -34,6 +35,7 @@ main {
         }
 
         h2 {
+            font-family: Cousine;
             padding-top: 0;
             font-size: 1.2rem;
 
@@ -42,8 +44,54 @@ main {
             }
         }
     }
+
+    .navProjects {
+        background: var(--black1);
+        width: 90%;
+        margin: 0 auto;
+
+        ul {
+            font-family: Fredericka;
+            font-size: 2rem;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            position: relative;
+            transition: 0.2s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 25%;
+                height: 2px;
+                background: var(--color1);
+                bottom: -5px;
+                transform: translateX(-100%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 25%;
+                height: 2px;
+                background: var(--color1);
+                bottom: -5px;
+                transform: translateX(100%);
+            }
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--color1);
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
     
     .projects-container {
+        background: var(--black1);
         display: grid;
         grid-template-columns: repeat(2, 50%);
         width: 90%;

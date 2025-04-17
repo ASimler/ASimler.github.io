@@ -7,9 +7,13 @@
   font-family: "Cousine";
   src: url(./../../assets/fonts/Cousine-Regular.ttf);
 }
+@font-face {
+  font-family: "Fredericka";
+  src: url(./../../assets/fonts/FrederickatheGreat-Regular.ttf);
+}
 :root {
   --white1: rgba(233, 233, 233, 0.74);
-  --black1: rgba(39, 39, 39, 0.9);
+  --black1: rgba(39, 39, 39);
   --color1: #e88a1e;
   --color2: #60e8ed;
   --color3: rgba(2, 23, 36, 0.671);
@@ -119,8 +123,9 @@ main .title {
   }
 }
 main .title h1, main .title h2 {
-  font-family: Cousine;
-  font-size: 2.5rem;
+  font-family: Fredericka;
+  font-size: 3.3rem;
+  font-weight: lighter;
   text-align: center;
   color: var(--color1);
   padding: 15px;
@@ -140,6 +145,7 @@ main .title h1, main .title h2 {
   }
 }
 main .title h2 {
+  font-family: Cousine;
   padding-top: 0;
   font-size: 1.2rem;
 }
@@ -148,7 +154,47 @@ main .title h2 {
     font-size: 1rem;
   }
 }
+main .navProjects {
+  background: var(--black1);
+  width: 90%;
+  margin: 0 auto;
+}
+main .navProjects ul {
+  font-family: Fredericka;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  position: relative;
+  transition: 0.2s;
+}
+main .navProjects ul::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  background: var(--color1);
+  bottom: -5px;
+  transform: translateX(-100%);
+}
+main .navProjects ul::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  background: var(--color1);
+  bottom: -5px;
+  transform: translateX(100%);
+}
+main .navProjects ul li {
+  cursor: pointer;
+}
+main .navProjects ul li:hover {
+  color: var(--color1);
+  transform: scale(1.2);
+}
 main .projects-container {
+  background: var(--black1);
   display: grid;
   grid-template-columns: repeat(2, 50%);
   width: 90%;

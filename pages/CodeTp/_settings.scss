@@ -7,10 +7,14 @@
     font-family: 'Cousine';
     src: url(./../../assets/fonts/Cousine-Regular.ttf);
 }
+@font-face {
+    font-family: 'Fredericka';
+    src: url(./../../assets/fonts/FrederickatheGreat-Regular.ttf);
+}
 
 :root {
     --white1: rgba(233, 233, 233, 0.74);
-    --black1: rgba(39, 39, 39, 0.9);
+    --black1: rgba(39, 39, 39);
     --color1: #e88a1e;
     --color2: #60e8ed;
     --color3: rgba(2, 23, 36, 0.671);
