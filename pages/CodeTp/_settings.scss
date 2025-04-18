@@ -35,5 +35,11 @@ body {
 
 a, a:visited {
     text-decoration: none;
-    color: var(--white1);
+    color: var(--black1);
+    transition: 0.2s;
+
+    &:hover {
+        color: var(--color1);
+    }
 }
+

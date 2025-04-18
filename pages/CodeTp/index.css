@@ -33,7 +33,11 @@ body {
 
 a, a:visited {
   text-decoration: none;
-  color: var(--white1);
+  color: var(--black1);
+  transition: 0.2s;
+}
+a:hover, a:visited:hover {
+  color: var(--color1);
 }
 
 /* SIDE BAR */
@@ -165,88 +169,57 @@ main .navProjects ul {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
-  position: relative;
-  transition: 0.2s;
-}
-main .navProjects ul::after {
-  content: "";
-  position: absolute;
-  width: 25%;
-  height: 2px;
-  background: var(--color1);
-  bottom: -5px;
-  transform: translateX(-100%);
-}
-main .navProjects ul::before {
-  content: "";
-  position: absolute;
-  width: 25%;
-  height: 2px;
-  background: var(--color1);
-  bottom: -5px;
-  transform: translateX(100%);
 }
 main .navProjects ul li {
   cursor: pointer;
+  position: relative;
+  transition: 0.2s;
 }
 main .navProjects ul li:hover {
   color: var(--color1);
   transform: scale(1.2);
 }
+main .navProjects ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--color1);
+  bottom: -15px;
+}
 main .projects-container {
   background: var(--black1);
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
+  padding: 50px 20px;
   width: 90%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
-@media screen and (max-width: 893px) {
-  main .projects-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 37% 63%;
-  }
-}
-main .projects-container .projects {
-  background: var(--white1);
-  margin: 50px 30px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 7px 1px var(--color2);
-  color: var(--black1);
+main .projects-container .TpList {
+  background: rgb(255, 250, 230);
+  height: 100%;
   font-family: Cousine;
-  text-align: center;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-@media screen and (max-width: 893px) {
-  main .projects-container .projects {
-    margin: 20px;
-  }
-}
-main .projects-container .projects h2 {
-  font-weight: bold;
-  font-size: 1.8rem;
-  padding-bottom: 15px;
-  color: var(--color3);
-}
-main .projects-container .projects .TpList {
-  font-weight: bold;
-}
-main .projects-container .projects .TpList li {
-  padding: 5px;
-  transition: 0.2s;
-}
-main .projects-container .projects .TpList li:hover {
-  color: var(--color2);
-  transform: scale(1.2);
-}
-main .projects-container .projects .TpList li a, main .projects-container .projects .TpList li a:visited {
-  color: var(--black1);
   font-size: 1.2rem;
+  color: var(--black1);
+  padding: 20px;
 }
-main .projects-container .projects .TpList li a {
-  transition: 0.2s;
+main .projects-container .TpList .css-Projects {
+  display: grid;
+  grid-template-columns: 30% 62% 8%;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 10px;
 }
-main .projects-container .projects .TpList li a:hover {
-  color: var(--color2);
+main .projects-container .TpList .css-Projects .imgProjects {
+  padding-top: 5px;
+}
+main .projects-container .TpList .css-Projects .imgProjects img {
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+}
+main .projects-container .TpList .css-Projects .logoProjects {
+  color: var(--color1);
+  font-size: 1.8rem;
 }/*# sourceMappingURL=index.css.map */
