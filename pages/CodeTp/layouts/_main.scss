@@ -87,6 +87,7 @@ main {
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        justify-content: center;
         gap: 15px;
 
         .TpList {
