@@ -32,7 +32,7 @@ function generatePassword() {
     passwordOutput.select();
     navigator.clipboard.writeText(window.getSelection());
 
-    generateButton.textContent = "Coppié !";
+    generateButton.textContent = "Copié !";
 
     setTimeout(() => {
         generateButton.textContent = "Générer mot de passe"

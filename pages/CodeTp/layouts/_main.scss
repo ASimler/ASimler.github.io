@@ -87,16 +87,18 @@ main {
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        gap: 15px;
 
         .TpList {
             background: rgb(255, 250, 230);
-            height: 100%;
+            // height: 100%;
+            border-radius: 20px;
             font-family: Cousine;
             font-size: 1.2rem;
             color: var(--black1);
             padding: 20px;
 
-            .css-Projects {
+            .css-Projects, .js-Projects {
                 display: grid;
                 grid-template-columns: 30% 62% 8%;
                 text-align: center;
@@ -105,10 +107,14 @@ main {
                 padding: 10px;
 
                 .imgProjects {
-                    padding-top: 5px;
+                    margin: 5px auto;
+                    width: 100px;
+                    height: 100px;
+
                     img {
-                        width: 100px;
-                        height: 100px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         border-radius: 150px;
                     }
                 }
@@ -118,6 +124,9 @@ main {
                     font-size: 1.8rem;
                 }
 
+                &:last-of-type {
+                    border-bottom: none;
+                }
             }
 
 

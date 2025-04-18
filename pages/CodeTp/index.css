@@ -194,16 +194,17 @@ main .projects-container {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  gap: 15px;
 }
 main .projects-container .TpList {
   background: rgb(255, 250, 230);
-  height: 100%;
+  border-radius: 20px;
   font-family: Cousine;
   font-size: 1.2rem;
   color: var(--black1);
   padding: 20px;
 }
-main .projects-container .TpList .css-Projects {
+main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
   display: grid;
   grid-template-columns: 30% 62% 8%;
   text-align: center;
@@ -211,15 +212,22 @@ main .projects-container .TpList .css-Projects {
   border-bottom: 1px solid grey;
   padding: 10px;
 }
-main .projects-container .TpList .css-Projects .imgProjects {
-  padding-top: 5px;
-}
-main .projects-container .TpList .css-Projects .imgProjects img {
+main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
+  margin: 5px auto;
   width: 100px;
   height: 100px;
+}
+main .projects-container .TpList .css-Projects .imgProjects img, main .projects-container .TpList .js-Projects .imgProjects img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 150px;
 }
-main .projects-container .TpList .css-Projects .logoProjects {
+main .projects-container .TpList .css-Projects .logoProjects, main .projects-container .TpList .js-Projects .logoProjects {
   color: var(--color1);
   font-size: 1.8rem;
+}
+main .projects-container .TpList .css-Projects:last-of-type, main .projects-container .TpList .js-Projects:last-of-type {
+  border-bottom: none;
 }/*# sourceMappingURL=index.css.map */
