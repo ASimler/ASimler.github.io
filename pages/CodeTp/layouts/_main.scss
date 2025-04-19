@@ -98,6 +98,12 @@ main {
             display: grid;
             grid-template-columns: repeat(2, 50%);
             gap: 15px;
+
+            @media screen and (max-width: 960px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                gap: 0;
+            }
         }
 
         .TpList {
@@ -113,6 +119,12 @@ main {
 
             @media screen and (max-width: 650px) {
                 font-size: 1rem;
+                width: 90%;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 0.8rem;
+                width: 90%;
             }
 
             .css-Projects, .js-Projects {
@@ -120,7 +132,6 @@ main {
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: 12% 83% 5%;
-                // grid-template-columns: 22% 70% 8%;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
@@ -135,6 +146,10 @@ main {
                     grid-template-columns: 32% 50% 28%;
                 }
 
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+
                 .imgProjects {
                     margin: 5px auto;
                     width: 100px;
@@ -143,6 +158,16 @@ main {
                     @media screen and (max-width: 650px) {
                         width: 80px;
                         height: 80px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 40px;
+                        height: 40px;
                     }
 
                     img {
@@ -160,6 +185,48 @@ main {
 
                 &:last-of-type {
                     border-bottom: none;
+                }
+            }
+
+            .js-Projects {
+                @media screen and (max-width: 1200px) {
+                    font-size: 1rem;
+                    grid-template-columns: 18% 73% 10% !important;
+
+                    & .imgProjects {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                
+                @media screen and (max-width: 9600px) {
+                    &:last-of-type{
+                        border-bottom: 1px solid grey;
+                    }
+                }
+
+
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                    padding: 2px;
+                    font-size: 0.8rem;
+                    grid-template-columns: 28% 60% 12% !important;
+
+                    & .imgProjects {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+
+                @media screen and (max-width: 400px) {
+                    font-size: 0.6rem;
+                    & .imgProjects {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    & .logoProjects {
+                        font-size: 1.2rem;
+                    }
                 }
             }
 

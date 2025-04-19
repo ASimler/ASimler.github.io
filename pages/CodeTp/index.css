@@ -207,6 +207,13 @@ main .projects-container #jsTpCol {
   grid-template-columns: repeat(2, 50%);
   gap: 15px;
 }
+@media screen and (max-width: 960px) {
+  main .projects-container #jsTpCol {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+}
 main .projects-container .TpList {
   background: rgb(255, 250, 230);
   width: 60%;
@@ -221,6 +228,13 @@ main .projects-container .TpList {
 @media screen and (max-width: 650px) {
   main .projects-container .TpList {
     font-size: 1rem;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .projects-container .TpList {
+    font-size: 0.8rem;
+    width: 90%;
   }
 }
 main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
@@ -244,6 +258,11 @@ main .projects-container .TpList .css-Projects, main .projects-container .TpList
     grid-template-columns: 32% 50% 28%;
   }
 }
+@media screen and (max-width: 500px) {
+  main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
+    width: 100%;
+  }
+}
 main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
   margin: 5px auto;
   width: 100px;
@@ -253,6 +272,18 @@ main .projects-container .TpList .css-Projects .imgProjects, main .projects-cont
   main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
     width: 80px;
     height: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
+    width: 40px;
+    height: 40px;
   }
 }
 main .projects-container .TpList .css-Projects .imgProjects img, main .projects-container .TpList .js-Projects .imgProjects img {
@@ -268,4 +299,43 @@ main .projects-container .TpList .css-Projects .logoProjects, main .projects-con
 }
 main .projects-container .TpList .css-Projects:last-of-type, main .projects-container .TpList .js-Projects:last-of-type {
   border-bottom: none;
+}
+@media screen and (max-width: 1200px) {
+  main .projects-container .TpList .js-Projects {
+    font-size: 1rem;
+    grid-template-columns: 18% 73% 10% !important;
+  }
+  main .projects-container .TpList .js-Projects .imgProjects {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 9600px) {
+  main .projects-container .TpList .js-Projects:last-of-type {
+    border-bottom: 1px solid grey;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .projects-container .TpList .js-Projects {
+    width: 100%;
+    padding: 2px;
+    font-size: 0.8rem;
+    grid-template-columns: 28% 60% 12% !important;
+  }
+  main .projects-container .TpList .js-Projects .imgProjects {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .projects-container .TpList .js-Projects {
+    font-size: 0.6rem;
+  }
+  main .projects-container .TpList .js-Projects .imgProjects {
+    width: 40px;
+    height: 40px;
+  }
+  main .projects-container .TpList .js-Projects .logoProjects {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=index.css.map */
