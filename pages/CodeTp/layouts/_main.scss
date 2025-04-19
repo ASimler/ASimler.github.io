@@ -58,6 +58,35 @@ main {
             display: flex;
             justify-content: space-around;
             padding: 20px 0;
+            transition: 0.2s;
+
+            @media screen and (max-width: 1400px) {
+                width: 45%;
+            }
+
+            @media screen and (max-width: 1150px) {
+                width: 55%;
+            }
+
+            @media screen and (max-width: 1000px) {
+                width: 60%;
+            }
+
+            @media screen and (max-width: 700px) {
+                width: 80%;
+            }
+
+            @media screen and (max-width: 550px) {
+                font-size: 1.5rem;
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 90%;
+            }
+
+            @media screen and (max-width: 350px) {
+                font-size: 1.2rem;
+            }
 
             li {
                 cursor: pointer;
@@ -189,6 +218,7 @@ main {
             }
 
             .js-Projects {
+
                 @media screen and (max-width: 1200px) {
                     font-size: 1rem;
                     grid-template-columns: 18% 73% 10% !important;
@@ -219,7 +249,6 @@ main {
                 }
 
                 @media screen and (max-width: 400px) {
-                    font-size: 0.6rem;
                     & .imgProjects {
                         width: 40px;
                         height: 40px;

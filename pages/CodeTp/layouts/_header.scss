@@ -35,16 +35,22 @@
           }
           
           li {
-            color: var(--white1);
+            // color: red;
             list-style: none;
             font-family: Cousine;
             font-size: 1.5rem;
             cursor: pointer;
-            padding-left: 0px;
-        
+            padding: 5px 10px;
+
             &:hover {
-                background: var(--color2);
-                color: var(--black1);
+              background: var(--color2);
+            }
+
+            &:hover a {
+              color: var(--black1);
+            }
+            a {
+              color: var(--white1);
             }
           }
       }

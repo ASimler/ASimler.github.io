@@ -74,16 +74,20 @@ a:hover, a:visited:hover {
   transition: 0.3s ease;
 }
 #side-bar li {
-  color: var(--white1);
   list-style: none;
   font-family: Cousine;
   font-size: 1.5rem;
   cursor: pointer;
-  padding-left: 0px;
+  padding: 5px 10px;
 }
 #side-bar li:hover {
   background: var(--color2);
+}
+#side-bar li:hover a {
   color: var(--black1);
+}
+#side-bar li a {
+  color: var(--white1);
 }
 
 /* Si .active existe alors les spans : */
@@ -171,6 +175,42 @@ main .navProjects ul {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1400px) {
+  main .navProjects ul {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  main .navProjects ul {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .navProjects ul {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .navProjects ul {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .navProjects ul {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .navProjects ul {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 350px) {
+  main .navProjects ul {
+    font-size: 1.2rem;
+  }
 }
 main .navProjects ul li {
   cursor: pointer;
@@ -328,9 +368,6 @@ main .projects-container .TpList .css-Projects:last-of-type, main .projects-cont
   }
 }
 @media screen and (max-width: 400px) {
-  main .projects-container .TpList .js-Projects {
-    font-size: 0.6rem;
-  }
   main .projects-container .TpList .js-Projects .imgProjects {
     width: 40px;
     height: 40px;
