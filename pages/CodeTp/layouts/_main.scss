@@ -51,6 +51,8 @@ main {
         margin: 0 auto;
 
         ul {
+            width: 35%;
+            margin: 0 auto;
             font-family: Fredericka;
             font-size: 2rem;
             display: flex;
@@ -85,32 +87,63 @@ main {
         padding: 50px 20px;
         width: 90%;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
         justify-content: center;
-        gap: 15px;
+
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 30% 70%;
+        }
+
+        #jsTpCol {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 15px;
+        }
 
         .TpList {
             background: rgb(255, 250, 230);
-            // height: 100%;
+            width: 60%;
+            margin: 0 auto;
             border-radius: 20px;
             font-family: Cousine;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--black1);
             padding: 20px;
+            transition: 0.2s;
+
+            @media screen and (max-width: 650px) {
+                font-size: 1rem;
+            }
 
             .css-Projects, .js-Projects {
+                width: 90%;
+                margin: 0 auto;
                 display: grid;
-                grid-template-columns: 22% 70% 8%;
+                grid-template-columns: 12% 83% 5%;
+                // grid-template-columns: 22% 70% 8%;
                 text-align: center;
                 align-items: center;
+                justify-content: center;
                 border-bottom: 1px solid grey;
                 padding: 10px;
+
+                @media screen and (max-width: 1350px) {
+                    grid-template-columns: 32% 50% 28%;
+                }
+
+                @media screen and (max-width: 650px) {
+                    grid-template-columns: 32% 50% 28%;
+                }
 
                 .imgProjects {
                     margin: 5px auto;
                     width: 100px;
                     height: 100px;
+
+                    @media screen and (max-width: 650px) {
+                        width: 80px;
+                        height: 80px;
+                    }
 
                     img {
                         width: 100%;

@@ -164,6 +164,8 @@ main .navProjects {
   margin: 0 auto;
 }
 main .navProjects ul {
+  width: 35%;
+  margin: 0 auto;
   font-family: Fredericka;
   font-size: 2rem;
   display: flex;
@@ -192,31 +194,66 @@ main .projects-container {
   padding: 50px 20px;
   width: 90%;
   margin: 0 auto;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  main .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+  }
+}
+main .projects-container #jsTpCol {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  justify-content: center;
   gap: 15px;
 }
 main .projects-container .TpList {
   background: rgb(255, 250, 230);
+  width: 60%;
+  margin: 0 auto;
   border-radius: 20px;
   font-family: Cousine;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--black1);
   padding: 20px;
+  transition: 0.2s;
+}
+@media screen and (max-width: 650px) {
+  main .projects-container .TpList {
+    font-size: 1rem;
+  }
 }
 main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 22% 70% 8%;
+  grid-template-columns: 12% 83% 5%;
   text-align: center;
   align-items: center;
+  justify-content: center;
   border-bottom: 1px solid grey;
   padding: 10px;
+}
+@media screen and (max-width: 1350px) {
+  main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
+    grid-template-columns: 32% 50% 28%;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .projects-container .TpList .css-Projects, main .projects-container .TpList .js-Projects {
+    grid-template-columns: 32% 50% 28%;
+  }
 }
 main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
   margin: 5px auto;
   width: 100px;
   height: 100px;
+}
+@media screen and (max-width: 650px) {
+  main .projects-container .TpList .css-Projects .imgProjects, main .projects-container .TpList .js-Projects .imgProjects {
+    width: 80px;
+    height: 80px;
+  }
 }
 main .projects-container .TpList .css-Projects .imgProjects img, main .projects-container .TpList .js-Projects .imgProjects img {
   width: 100%;
