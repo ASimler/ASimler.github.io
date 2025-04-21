@@ -21,8 +21,24 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 50%);
 
+        #section1, #section3 {
+            @media screen and (max-width: 500px) {
+                grid-template-columns: 80% 20% !important;
+            }
+        }
+
+        #section2, #section4 {
+            @media screen and (max-width: 500px) {
+                grid-template-columns: 20% 80% !important;
+            }
+        }
+
         h2 {
             padding-bottom: 30px;
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.2rem;
+            }
         }
     }
 

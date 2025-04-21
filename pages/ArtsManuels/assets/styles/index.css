@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Bellota";
+  src: url(./../../assets/fonts/BellotaText-Light.ttf);
+}
+body {
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgb(42, 123, 155) 0%, rgb(118, 227, 209) 50%, rgb(236, 240, 216) 100%);
+}
+
+h1 {
+  font-family: Bellota;
+  text-align: center;
+  margin-top: 200px;
+  color: rgb(72, 72, 72);
+}/*# sourceMappingURL=index.css.map */

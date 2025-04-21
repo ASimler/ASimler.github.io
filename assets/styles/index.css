@@ -173,8 +173,23 @@ main .section {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
+@media screen and (max-width: 500px) {
+  main .section #section1, main .section #section3 {
+    grid-template-columns: 80% 20% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section #section2, main .section #section4 {
+    grid-template-columns: 20% 80% !important;
+  }
+}
 main .section h2 {
   padding-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  main .section h2 {
+    font-size: 1.2rem;
+  }
 }
 main .s1-left, main .s2-right, main .s3-left, main .s4-right {
   padding: 20px;

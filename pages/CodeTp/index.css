@@ -74,9 +74,10 @@ a:hover, a:visited:hover {
   transition: 0.3s ease;
 }
 #side-bar li {
+  margin: 10px 0 0 10px;
   list-style: none;
   font-family: Cousine;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
   padding: 5px 10px;
 }
