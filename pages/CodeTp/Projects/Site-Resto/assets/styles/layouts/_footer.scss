@@ -2,26 +2,45 @@ body {
     footer {
         background: url(../img/bg-footer.jpg) center/cover;
 
+        @media screen and (max-width: 550px) {
+            background: none;
+        }
+
         .footer-container {
             width: 70%;
             max-width: 1000px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(2, 50%);
+
+            @media screen and (max-width: 550px) {
+                display: flex;
+                width: 100%;
+            }
             
     
             .footer-left {
                 padding: 50px 50px 50px 0;
+
+                @media screen and (max-width: 550px) {
+                    display: none;
+                }
 
                 p {
                     font-size: 0.8rem;
                     color: $color4;
                     line-height: 25px;
                 }
+
             }
 
             .footer-right {
                 padding: 50px 0 50px 50px;
+
+                @media screen and (max-width: 550px) {
+                    width: 100%;
+                    padding: 40px 20px 20px 20px;
+                }
 
                 h6 {
                     text-transform: uppercase;
@@ -35,6 +54,14 @@ body {
                     padding: 10px;
                     width: 50%;
                     margin: 15px 0 50px 0;
+
+                    @media screen and (max-width: 1000px) {
+                        width: 90%;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        width: 90%;
+                    }
                 }
 
                 .networks {
@@ -42,6 +69,17 @@ body {
                     display: grid;
                     grid-template-columns: 25% 75%;
                     align-items: center;
+
+                    @media screen and (max-width: 1050px) {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: repeat(2, 1fr);
+                    }
+
+                    h6 {
+                        @media screen and (max-width: 1050px) {
+                            padding-bottom: 15px;
+                        }
+                    }
 
                     ul {
                         display: flex;

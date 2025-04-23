@@ -150,16 +150,7 @@ body {
                 color: $black2;
                 width: 50%;
                 max-width: 1000px;
-                transition: 0.3s;
-
-                
-                @media screen and (max-width:1460px) {
-                    width: 70%;
-                }
-                @media screen and (max-width: 800px) {
-                    width: 90%;
-                }
-                
+                transition: 0.3s;                
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: repeat(2, 50%);
@@ -168,6 +159,14 @@ body {
                 align-items: center;
                 padding: 15px 3%;
                 position: relative;
+
+                @media screen and (max-width:1460px) {
+                    width: 70%;
+                }
+
+                @media screen and (max-width: 800px) {
+                    width: 90%;
+                }
 
                 @media screen and (max-width: 550px) {
                     grid-template-columns: 1fr;
@@ -243,12 +242,12 @@ body {
                 }
 
                 @media screen and (max-width: 550px) {
-                    margin: 750px auto;
+                    margin: 750px auto 50px auto;
                     width: 95%;
                 }
 
                 @media screen and (max-width: 440px) {
-                    margin: 600px auto;
+                    margin: 600px auto 50px auto;
                 }
 
                 .sec3-left {
@@ -335,7 +334,7 @@ body {
                                 "phone"
                                 "email"
                                 "btn";
-                            // }
+                            }
 
                             input, select {
                                 padding: 15px 0;
@@ -409,6 +408,10 @@ body {
 
         // ******************** Section 4 *******************
         .sec4 {
+
+            @media screen and (max-width: 560px) {
+                display: none;
+            }
             .sec4-title {
                 max-width: 1000px;
                 width: 70%;
@@ -425,6 +428,10 @@ body {
                 max-width: 1000px;
                 width: 70%;
                 margin: 0 auto;
+
+                @media screen and (max-width: 850px) {
+                    width: 95%;
+                }
 
                 // Déclaration du style des carrés date
                 .date {
@@ -518,6 +525,10 @@ body {
             padding: 150px 0 300px 0;
             position: relative;
 
+            @media screen and (max-width: 560px) {
+                padding: 20px 0 300px 0;
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -526,6 +537,11 @@ body {
                 background: url(../img/gmap.jpg) center/cover;
                 bottom: 0;
                 z-index: -1;
+
+                @media screen and (max-width: 440px) {
+                    // height: 500px;
+                    // bottom: 100px;
+                }
             }
 
             div {
@@ -537,6 +553,10 @@ body {
                 background: $white2;
                 color: $black2;
                 position: relative;
+
+                @media screen and (max-width: 440px) {
+                    width: 95%;
+                }
 
                 &::before {
                     content: "";
@@ -576,5 +596,4 @@ body {
             }
         }
     }
-}
 }

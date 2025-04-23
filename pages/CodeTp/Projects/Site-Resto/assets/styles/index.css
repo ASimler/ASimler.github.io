@@ -428,13 +428,13 @@ body main .sec3 .sec3-container {
 }
 @media screen and (max-width: 550px) {
   body main .sec3 .sec3-container {
-    margin: 750px auto;
+    margin: 750px auto 50px auto;
     width: 95%;
   }
 }
 @media screen and (max-width: 440px) {
   body main .sec3 .sec3-container {
-    margin: 600px auto;
+    margin: 600px auto 50px auto;
   }
 }
 body main .sec3 .sec3-container .sec3-left {
@@ -504,82 +504,92 @@ body main .sec3 .sec3-container .sec3-right .sec3-right-container form {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 80px;
     grid-template-areas: "nb" "date" "hour" "name" "phone" "email" "btn";
   }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form input, body main .sec3 .sec3-container .sec3-right .sec3-right-container form select {
-    padding: 15px 0;
-    background: none;
-    border: none;
-    font-size: 0.9rem;
-  }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form select {
-    padding-right: 60%;
-  }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form .inp-with-before {
-    text-align: left;
-    position: relative;
-  }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form .inp-with-before::before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background: rgb(199, 199, 199);
-    bottom: 0;
-  }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit {
-    display: grid;
-    grid-area: btn;
-    width: 100%;
-    align-items: end;
-  }
-  body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
-    background: #21201E;
-    width: 35%;
-    margin: 0 auto;
-    color: rgb(238, 238, 236);
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: Font2;
-    font-size: 1rem;
-    letter-spacing: 4px;
-  }
 }
-@media screen and (max-width: 800px) and (max-width: 800px) {
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form input, body main .sec3 .sec3-container .sec3-right .sec3-right-container form select {
+  padding: 15px 0;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+}
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form select {
+  padding-right: 60%;
+}
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form .inp-with-before {
+  text-align: left;
+  position: relative;
+}
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form .inp-with-before::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgb(199, 199, 199);
+  bottom: 0;
+}
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit {
+  display: grid;
+  grid-area: btn;
+  width: 100%;
+  align-items: end;
+}
+body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
+  background: #21201E;
+  width: 35%;
+  margin: 0 auto;
+  color: rgb(238, 238, 236);
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-family: Font2;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+@media screen and (max-width: 800px) {
   body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
     width: 50%;
   }
 }
-@media screen and (max-width: 800px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
     width: 70%;
   }
 }
-@media screen and (max-width: 800px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
     width: 80%;
   }
 }
-@media screen and (max-width: 800px) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   body main .sec3 .sec3-container .sec3-right .sec3-right-container form .btn-submit input {
     width: 100%;
     padding-bottom: 15px;
   }
 }
-body main .sec3 .sec4 .sec4-title {
+@media screen and (max-width: 560px) {
+  body main .sec4 {
+    display: none;
+  }
+}
+body main .sec4 .sec4-title {
   max-width: 1000px;
   width: 70%;
   margin: 0 auto;
   text-align: center;
 }
-body main .sec3 .sec4 .sec4-title h2 {
+body main .sec4 .sec4-title h2 {
   line-height: 30px;
   font-size: 2.5em;
 }
-body main .sec3 .sec4 .sec4-main {
+body main .sec4 .sec4-main {
   max-width: 1000px;
   width: 70%;
   margin: 0 auto;
 }
-body main .sec3 .sec4 .sec4-main .date {
+@media screen and (max-width: 850px) {
+  body main .sec4 .sec4-main {
+    width: 95%;
+  }
+}
+body main .sec4 .sec4-main .date {
   background: #21201E;
   width: 90px;
   height: 90px;
@@ -589,50 +599,50 @@ body main .sec3 .sec4 .sec4-main .date {
   justify-content: center;
   align-items: center;
 }
-body main .sec3 .sec4 .sec4-main .date .day {
+body main .sec4 .sec4-main .date .day {
   font-size: 1.5rem;
   font-weight: bold;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container {
+body main .sec4 .sec4-main .sec4-main-container {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   grid-template-areas: "m1 m3" "m2 m3";
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-ml-right {
+body main .sec4 .sec4-main .sec4-main-container .sec4-ml-right {
   background: rgb(238, 238, 236);
   color: #21201E;
   padding: 20px;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-1 {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-1 {
   display: grid;
   grid-area: m1;
   grid-template-columns: 30% 70%;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-1 .sec4-ml-top {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-1 .sec4-ml-top {
   display: flex;
   justify-content: center;
   align-items: center;
   background: url(../img/event-01.jpg) center/cover;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-2 {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-2 {
   display: grid;
   grid-area: m2;
   grid-template-columns: 30% 70%;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-2 .sec4-ml-bottom {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-2 .sec4-ml-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
   background: url(../img/event-02.jpg) center/cover;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-3 {
   display: grid;
   grid-area: m3;
   background: url(../img/event-03.jpg) center/cover;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container {
   margin: 25px;
   background: rgb(238, 238, 236);
   text-align: center;
@@ -641,26 +651,31 @@ body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-cont
   justify-content: center;
   align-items: center;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container h5 {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container h5 {
   width: 60%;
   line-height: 23px;
   color: #21201E;
   padding-top: 40px;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container .adress {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container .adress {
   padding-bottom: 100px;
 }
-body main .sec3 .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container .buy {
+body main .sec4 .sec4-main .sec4-main-container .sec4-main-3 .sec4-mr-container .buy {
   color: #21201E;
   padding-bottom: 50px;
 }
-body main .sec3 .sec5 {
+body main .sec5 {
   width: 100%;
   margin: 0 auto;
   padding: 150px 0 300px 0;
   position: relative;
 }
-body main .sec3 .sec5::after {
+@media screen and (max-width: 560px) {
+  body main .sec5 {
+    padding: 20px 0 300px 0;
+  }
+}
+body main .sec5::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -669,7 +684,7 @@ body main .sec3 .sec5::after {
   bottom: 0;
   z-index: -1;
 }
-body main .sec3 .sec5 div {
+body main .sec5 div {
   width: 70%;
   max-width: 1000px;
   margin: 0 auto;
@@ -679,7 +694,12 @@ body main .sec3 .sec5 div {
   color: #21201E;
   position: relative;
 }
-body main .sec3 .sec5 div::before {
+@media screen and (max-width: 440px) {
+  body main .sec5 div {
+    width: 95%;
+  }
+}
+body main .sec5 div::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -690,28 +710,33 @@ body main .sec3 .sec5 div::before {
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
 }
-body main .sec3 .sec5 div .sec5-text {
+body main .sec5 div .sec5-text {
   padding-bottom: 30px;
   line-height: 30px;
 }
-body main .sec3 .sec5 div .sec5-text::before {
+body main .sec5 div .sec5-text::before {
   content: "❝";
   font-size: 1.5rem;
 }
-body main .sec3 .sec5 div .sec5-text::after {
+body main .sec5 div .sec5-text::after {
   content: "❞";
   font-size: 1.5rem;
 }
-body main .sec3 .sec5 div .name {
+body main .sec5 div .name {
   font-size: 1.5rem;
   padding-bottom: 15px;
 }
-body main .sec3 .sec5 div .function {
+body main .sec5 div .function {
   color: #A67245;
 }
 
 body footer {
   background: url(../img/bg-footer.jpg) center/cover;
+}
+@media screen and (max-width: 550px) {
+  body footer {
+    background: none;
+  }
 }
 body footer .footer-container {
   width: 70%;
@@ -720,8 +745,19 @@ body footer .footer-container {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
+@media screen and (max-width: 550px) {
+  body footer .footer-container {
+    display: flex;
+    width: 100%;
+  }
+}
 body footer .footer-container .footer-left {
   padding: 50px 50px 50px 0;
+}
+@media screen and (max-width: 550px) {
+  body footer .footer-container .footer-left {
+    display: none;
+  }
 }
 body footer .footer-container .footer-left p {
   font-size: 0.8rem;
@@ -730,6 +766,12 @@ body footer .footer-container .footer-left p {
 }
 body footer .footer-container .footer-right {
   padding: 50px 0 50px 50px;
+}
+@media screen and (max-width: 550px) {
+  body footer .footer-container .footer-right {
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+  }
 }
 body footer .footer-container .footer-right h6 {
   text-transform: uppercase;
@@ -743,11 +785,32 @@ body footer .footer-container .footer-right input {
   width: 50%;
   margin: 15px 0 50px 0;
 }
+@media screen and (max-width: 1000px) {
+  body footer .footer-container .footer-right input {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  body footer .footer-container .footer-right input {
+    width: 90%;
+  }
+}
 body footer .footer-container .footer-right .networks {
   max-width: 300px;
   display: grid;
   grid-template-columns: 25% 75%;
   align-items: center;
+}
+@media screen and (max-width: 1050px) {
+  body footer .footer-container .footer-right .networks {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1050px) {
+  body footer .footer-container .footer-right .networks h6 {
+    padding-bottom: 15px;
+  }
 }
 body footer .footer-container .footer-right .networks ul {
   display: flex;
