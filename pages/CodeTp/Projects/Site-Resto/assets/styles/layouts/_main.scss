@@ -4,8 +4,12 @@ body {
         // ******************** Section 1 *******************
         .sec1 {
             display: grid;
-            grid-template-columns: repeat(2, 50%);
+            grid-template-columns: repeat(2, 50%); 
             
+            @media screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 100% 0%;
+            }
 
             .sec1-left {
                 background: $white2;
@@ -20,6 +24,12 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
+                    h2 {
+                        @media screen and (max-width: 600px) {
+                            font-size: 1.5rem;
+                        }
+                    }
 
                     .avatar {
                         background: url(../img/avatar-01.jpg) center/cover;
@@ -45,6 +55,11 @@ body {
 
             .sec1-right {
                 background: url(./../img/store-01.jpg) center/cover;
+
+                @media screen and (max-width: 600px) {
+                    display: none;
+                }
+
             }
         }
 
@@ -63,6 +78,21 @@ body {
                 width: 100%;
                 background: url(../img/bg-menu-01.jpg) center/cover;
                 bottom: 0;
+
+                @media screen and (max-width: 550px) {
+                    height: 1300px;
+                    transform: translateY(700px);
+                }
+
+                @media screen and (max-width: 440px) {
+                    height: 1100px;
+                    transform: translateY(500px);
+                }
+
+                @media screen and (max-width: 320px) {
+                    height: 1080px;
+                    transform: translateY(480px);
+                }
             }
 
             .sec2-title {
@@ -85,6 +115,18 @@ body {
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-around;
+
+                    @media screen and (max-width: 800px) {
+                        width: 90%;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        font-size: 0.9rem;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        font-size: 0.8rem;
+                    }
 
                     li {
                         position: relative;
@@ -114,6 +156,9 @@ body {
                 @media screen and (max-width:1460px) {
                     width: 70%;
                 }
+                @media screen and (max-width: 800px) {
+                    width: 90%;
+                }
                 
                 margin: 0 auto;
                 display: grid;
@@ -123,6 +168,12 @@ body {
                 align-items: center;
                 padding: 15px 3%;
                 position: relative;
+
+                @media screen and (max-width: 550px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: 0;
+                }
 
                 &::before {
                     content: "";
@@ -140,6 +191,10 @@ body {
                         align-items: center;
                         justify-content: center;
                         border-bottom: 1px dashed $color3;
+
+                        @media screen and (max-width: 350px) {
+                            grid-template-columns: 30% 50% 15%;
+                        }
 
                         img {
                             width: 90%;
@@ -160,6 +215,10 @@ body {
                             color: $color1;
                             font-size: 1.1rem;
                             font-weight: bold;
+
+                            @media screen and (max-width: 350px) {
+                                text-align: right;
+                            }
                         }
                     }
                 }
@@ -181,6 +240,15 @@ body {
                 @media screen and (max-width: 1350px) {
                     display: flex;
                     flex-direction: column;;
+                }
+
+                @media screen and (max-width: 550px) {
+                    margin: 750px auto;
+                    width: 95%;
+                }
+
+                @media screen and (max-width: 440px) {
+                    margin: 600px auto;
                 }
 
                 .sec3-left {
@@ -228,6 +296,13 @@ body {
                             width: 60%;
                         }
 
+                        .sec3-right-title {
+                            h2 {
+                                line-height: 30px;
+                            }
+                        }
+
+
                         form {
                             display: grid;
                             grid-template-columns: repeat(3, 1fr);
@@ -237,6 +312,7 @@ body {
                             "name phone email"
                             "btn btn btn";
                             gap: 30px;
+                            justify-content: center;
 
                             @media screen and (max-width:1460px) {
                                 grid-template-columns: repeat(2, 1fr);
@@ -259,7 +335,7 @@ body {
                                 "phone"
                                 "email"
                                 "btn";
-                            }
+                            // }
 
                             input, select {
                                 padding: 15px 0;
@@ -296,7 +372,7 @@ body {
                                 input {
                                     background: $black2;
                                     width: 35%;
-                                    height: 70%;
+                                    // height: 70%;
                                     margin: 0 auto;
                                     color: $white2;
                                     border-radius: 50px;
@@ -319,6 +395,7 @@ body {
 
                                     @media screen and (max-width: 500px) {
                                         width: 100%;
+                                        padding-bottom: 15px;
                                     }
                                 }
                             }
@@ -499,4 +576,5 @@ body {
             }
         }
     }
+}
 }

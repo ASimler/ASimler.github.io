@@ -10,6 +10,17 @@ body {
       padding-top: 30px;
       display: grid;
       grid-template-columns: 10% 80% 10%;
+      transition: 0.2s;
+
+      @media screen and (max-width: 1000px) {
+        width: 90%;
+        grid-template-columns: 15% 70% 15%;
+      }
+
+      @media screen and (max-width: 750px) {
+        grid-template-columns: 20% 80%;
+        width: 80%;
+      }
 
       .nav-left {
         display: flex;
@@ -27,6 +38,10 @@ body {
 
         font-size: 0.8rem;
         text-transform: uppercase;
+
+        @media screen and (max-width: 750px) {
+          display: none;
+        }
 
         li {
           cursor: pointer;
@@ -46,6 +61,15 @@ body {
         align-items: center;
         transition: 0.2s;
 
+        @media screen and (max-width: 750px) {
+          justify-content: end;
+          gap: 20px;
+        }
+
+        @media screen and (max-width: 350px) {
+          gap: 10px;
+        }
+
         li:hover {
           transform: scale(1.2);
           i {
@@ -60,21 +84,56 @@ body {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       text-align: center;
 
+      @media screen and (max-width: 400px) {
+        width: 90%;
+      }
+
       span {
         font-size: 4rem;
+        margin-top: 80px;
+
+        @media screen and (max-width: 950px) {
+          line-height: 50px;
+          font-size: 3rem;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 2.3rem;
+        }
       }
 
       img {
         padding: 80px 0;
+
+        @media screen and (max-width: 400px) {
+          padding: 30px 0;
+        }
       }
 
       p {
         text-transform: uppercase;
-        letter-spacing: 6px;
+        letter-spacing: 5px;
+
+        @media screen and (max-width: 400px) {
+          font-size: 0.6rem;
+        }
+
+      }
+
+      h1 {
+        @media screen and (max-width: 950px) {
+          line-height: 80px;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 2rem;
+          line-height: 40px;
+          letter-spacing: 8px;
+        }
       }
     }
   }
