@@ -1,10 +1,27 @@
 @font-face {
   font-family: "Bellota";
-  src: url(./../../assets/fonts/BellotaText-Light.ttf);
+  src: url(./../../../../assets/fonts/BellotaText-Light.ttf);
 }
+@font-face {
+  font-family: "Rubick";
+  src: url(./../../../../../assets/fonts/RubikGlitch-Regular.ttf);
+}
+@font-face {
+  font-family: "Fredericka";
+  src: url(./../../../../assets/fonts/FrederickatheGreat-Regular.ttf);
+}
+:root {
+  --color1: rgb(238, 242, 213);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: #2A7B9B;
-  background: linear-gradient(90deg, rgb(42, 123, 155) 0%, rgb(118, 227, 209) 50%, rgb(236, 240, 216) 100%);
+  background: url(./../img/art-wallpaper3.jpg) center/cover fixed;
 }
 
 h1 {
@@ -12,4 +29,28 @@ h1 {
   text-align: center;
   margin-top: 200px;
   color: rgb(72, 72, 72);
+}
+
+header h1 {
+  padding-top: 20px;
+  font-family: Fredericka;
+  font-weight: lighter;
+  font-size: 10vw;
+  color: var(--color1);
+  margin: 30px;
+  line-height: 80px;
+}
+
+main .main-container {
+  position: relative;
+}
+main .main-container::before {
+  content: "";
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  background: url(./../../../../../assets/img/LogoAD.png);
 }/*# sourceMappingURL=index.css.map */

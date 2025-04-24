@@ -1,11 +1,32 @@
 @font-face {
     font-family: 'Bellota';
-    src: url(./../../assets/fonts/BellotaText-Light.ttf);
+    src: url(./../../../../assets/fonts/BellotaText-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Rubick';
+    src: url(./../../../../../assets/fonts/RubikGlitch-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Fredericka';
+    src: url(./../../../../assets/fonts/FrederickatheGreat-Regular.ttf);
+}
+
+:root {
+    --color1: rgb(238, 242, 213);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: #2A7B9B;
-    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(118, 227, 209, 1) 50%, rgba(236, 240, 216, 1) 100%);
+    // background: #2A7B9B;
+    // background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(118, 227, 209, 1) 50%, rgba(236, 240, 216, 1) 100%);
+    background: url(./../img/art-wallpaper3.jpg) center/cover fixed;
 }
 
 h1 {

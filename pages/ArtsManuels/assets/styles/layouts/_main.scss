@@ -1,0 +1,24 @@
+main {
+    // .logo {
+    //     margin: 200px auto 50px auto;
+    //     width: 250px;
+    //     height: 250px;
+    //     background: url(./../../../../assets/img/LogoAD.png) center/cover;
+    // }
+
+    .main-container {
+        position: relative;
+
+        &::before {
+            content: "";
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 250px;
+            background: url(./../../../../../assets/img/LogoAD.png);
+            // background: white;
+        }
+    }
+
+}
