@@ -284,14 +284,14 @@ body main .sec2::before {
 }
 @media screen and (max-width: 440px) {
   body main .sec2::before {
-    height: 1100px;
-    transform: translateY(500px);
+    height: 1080px;
+    transform: translateY(670px);
   }
 }
 @media screen and (max-width: 320px) {
   body main .sec2::before {
-    height: 1080px;
-    transform: translateY(480px);
+    height: 1050px;
+    transform: translateY(400px);
   }
 }
 body main .sec2 .sec2-title {
@@ -428,7 +428,7 @@ body main .sec3 .sec3-container {
 }
 @media screen and (max-width: 550px) {
   body main .sec3 .sec3-container {
-    margin: 750px auto 50px auto;
+    margin: 650px auto 50px auto;
     width: 95%;
   }
 }
@@ -440,6 +440,11 @@ body main .sec3 .sec3-container {
 body main .sec3 .sec3-container .sec3-left {
   background: black;
   padding: 25px;
+}
+@media screen and (max-width: 550px) {
+  body main .sec3 .sec3-container .sec3-left {
+    margin-top: 120px;
+  }
 }
 body main .sec3 .sec3-container .sec3-left .sec3-left-container {
   height: 100%;
