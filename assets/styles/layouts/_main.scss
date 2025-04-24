@@ -12,6 +12,19 @@ main {
         top: -50px;
         left: 10%;
       }
+
+    
+    #section1, #section3 {
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 70% 30%;
+        }
+    }
+
+    #section2, #section4 {
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 30% 70%;
+        }
+    }
     
     .section {
         background: rgba(214, 222, 231, 0.768);
@@ -21,17 +34,6 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 50%);
 
-        #section1, #section3 {
-            @media screen and (max-width: 500px) {
-                grid-template-columns: 80% 20% !important;
-            }
-        }
-
-        #section2, #section4 {
-            @media screen and (max-width: 500px) {
-                grid-template-columns: 20% 80% !important;
-            }
-        }
 
         h2 {
             padding-bottom: 30px;

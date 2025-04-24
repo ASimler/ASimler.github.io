@@ -165,6 +165,16 @@ main::before {
   top: -50px;
   left: 10%;
 }
+@media screen and (max-width: 500px) {
+  main #section1, main #section3 {
+    grid-template-columns: 70% 30%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main #section2, main #section4 {
+    grid-template-columns: 30% 70%;
+  }
+}
 main .section {
   background: rgba(214, 222, 231, 0.768);
   width: 80%;
@@ -172,16 +182,6 @@ main .section {
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-}
-@media screen and (max-width: 500px) {
-  main .section #section1, main .section #section3 {
-    grid-template-columns: 80% 20% !important;
-  }
-}
-@media screen and (max-width: 500px) {
-  main .section #section2, main .section #section4 {
-    grid-template-columns: 20% 80% !important;
-  }
 }
 main .section h2 {
   padding-bottom: 30px;
