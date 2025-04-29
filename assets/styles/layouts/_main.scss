@@ -34,6 +34,19 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 50%);
 
+        p {
+            cursor: pointer;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            overflow: hidden;
+        }
+
+        .paragraphDisplay {
+            display: block;
+        }
+
 
         h2 {
             padding-bottom: 30px;

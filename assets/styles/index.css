@@ -183,6 +183,17 @@ main .section {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
+main .section p {
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+main .section .paragraphDisplay {
+  display: block;
+}
 main .section h2 {
   padding-bottom: 30px;
 }

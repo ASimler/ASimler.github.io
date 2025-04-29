@@ -7,7 +7,7 @@ console.log(nav);
 let scrollValue = window.scrollY;
 
 window.addEventListener("scroll", (e) => {
-  console.log(scrollValue);
+  // console.log(scrollValue);
 
   // Une fois le scroll commencé on le compare avec la variable scrollValue
   if (window.scrollY < 15) {
@@ -23,3 +23,14 @@ window.addEventListener("scroll", (e) => {
   // Une fois le test terminé on réimplémente scrollValue avec la nouvelle valeur du scrollY
   scrollValue = window.scrollY;
 });
+
+
+paragraphs = document.querySelectorAll('.paragraph');
+console.log(paragraphs);
+
+paragraphs.forEach(paragraph => {
+  paragraph.addEventListener('click', (e) => {
+    paragraph.classList.toggle('paragraphDisplay');
+  });
+});
+
